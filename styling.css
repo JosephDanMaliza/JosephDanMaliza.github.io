@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", serif;
+}
+
+body {
+    background: linear-gradient(to right, #56aaa2, #00796b); 
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #00796b, #004d40); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #eff4f5;
+    font-weight: bold;
+}
+
+h2 {
+    color: #eff4f5;
+    margin: 20px 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(10, 63, 65, 0.5);
+}
+
+a, p {
+    color: #eff4f5;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+main {
+    margin: 20px 0;
+}
+
+.features ul, .specifications ul {
+    list-style-type: square;
+    margin: 15px 0;
+    padding-left: 20px;
+    font-size: 1.1em; 
+}
+
+.features li, .specifications li {
+    padding: 10px; 
+    font-size: 1.1em; 
+}
+
+.images {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.device-colors {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.color-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.color-container img {
+    width: 22%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.color-container img:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; 
+    }
+
+    h2 {
+        font-size: 2em; 
+    }
+
+    .image-container img {
+        width: 45%; 
+    }
+
+    .color-container img {
+        width: 45%; 
+    }
+
+    .features ul, .specifications ul {
+        font-size: 1em; 
+    }
+
+    a, p {
+        font-size: 1.2em; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; 
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .image-container img {
+        width: 80%; 
+    }
+
+    .color-container img {
+        width: 80%;
+    }
+
+    .features li, .specifications li {
+        font-size: 0.9em; 
+    }
+
+    a, p {
+        font-size: 1em;
+    }
+}
