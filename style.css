@@ -240,12 +240,4 @@ section {
     }
 }
 
-footer {
-    width: 100%;
-    background-color: #003300;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
-}
+
