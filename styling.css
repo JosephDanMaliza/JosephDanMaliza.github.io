@@ -6,12 +6,12 @@
 }
 
 body {
-    background: linear-gradient(to right, #56aaa2, #00796b); 
+    background: linear-gradient(to right, #6e7575, #3e4746); 
     line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(to right, #00796b, #004d40); 
+    background: linear-gradient(to right, #525858, #000000); 
     color: white;
     padding: 20px;
     text-align: center;
@@ -60,12 +60,14 @@ main {
 
 .image-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
     gap: 20px;
 }
 
 .image-container img {
     width: 30%;
+    max-width: 250px; /* Set a max width for images */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -83,12 +85,14 @@ main {
 
 .color-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
     gap: 20px;
 }
 
 .color-container img {
     width: 22%;
+    max-width: 150px; /* Set a max width for color images */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -99,7 +103,7 @@ main {
     transform: scale(1.1);
 }
 
-
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5em; 
@@ -109,12 +113,8 @@ main {
         font-size: 2em; 
     }
 
-    .image-container img {
-        width: 45%; 
-    }
-
-    .color-container img {
-        width: 45%; 
+    .image-container img, .color-container img {
+        width: 45%; /* Adjust image width for medium devices */
     }
 
     .features ul, .specifications ul {
@@ -135,12 +135,8 @@ main {
         font-size: 1.5em;
     }
 
-    .image-container img {
-        width: 80%; 
-    }
-
-    .color-container img {
-        width: 80%;
+    .image-container img, .color-container img {
+        width: 80%; /* Adjust image width for small devices */
     }
 
     .features li, .specifications li {
