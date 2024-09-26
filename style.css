@@ -30,19 +30,19 @@ body {
 
 @media (max-width: 768px) {
     .main-container {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;  
+        align-items: center;
     }
 
     .main-container .content {
-        width: 90%; 
+        width: 90%;
+        text-align: center;  
     }
 
     .main-container .image {
-        max-width: 80%; 
-        height: auto; 
+        max-width: 80%;  
+        height: auto;
     }
-
     h1, h2, p {
         text-align: center; 
     }
@@ -176,7 +176,12 @@ section {
 }
 
 .project-buttons {
-    margin-top: 20px; 
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;  
+ 
 }
 
 .project-button {
@@ -188,6 +193,8 @@ section {
     border-radius: 5px;
     margin: 5px;
     transition: background-color 0.3s;
+    width: 100%;  
+    text-align: center;
 }
 
 .project-button:hover {
