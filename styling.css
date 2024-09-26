@@ -6,12 +6,12 @@
 }
 
 body {
-    background: linear-gradient(to right, #6e7575, #3e4746); 
+    background: linear-gradient(to right, #2b8686, #0f5f56); 
     line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(to right, #525858, #000000); 
+    background: linear-gradient(to right, #358585, #1d7a76); 
     color: white;
     padding: 20px;
     text-align: center;
