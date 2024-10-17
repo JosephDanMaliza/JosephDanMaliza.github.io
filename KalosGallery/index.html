@@ -137,17 +137,17 @@
         }
 
         .card .card-title {
-            font-size: 1.8rem; /* Smaller font size for card titles */
+            font-size: 1.8rem; 
         }
 
         .card .card-text {
-            font-size: 1.0rem; /* Smaller font size for card text */
+            font-size: 1.0rem; 
         }
 
         .evolution-img {
-            width: 100px; /* Fixed width */
-            height: 100px; /* Fixed height */
-            object-fit: cover; /* Ensure images cover the area */
+            width: 100px; 
+            height: 100px; 
+            object-fit: cover; 
             transition: transform 0.3s;
         }
 
@@ -157,7 +157,7 @@
 
         .evolution-text {
             font-size: 1.0rem;
-            margin-top: 10px; /* Add margin between image and evolution name */
+            margin-top: 10px; 
         }
 
         
@@ -273,7 +273,7 @@
     <div class="container starter-pokemon-section">
         <h2 class="text-center">Kalos Starter Pokémon Evolution Lines</h2>
         <div class="row" id="starter-pokemon-cards">
-            <!-- Cards for starter Pokémon and their evolutions will be generated here by JavaScript -->
+          
         </div>
     </div>
 
@@ -313,7 +313,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        // Starter Pokémon Evolution Line Data
+        
         const pokemonData = [
             {
                 name: 'Chespin',
@@ -366,10 +366,8 @@
             });
         }
 
-        // Call the function to generate the cards
         generatePokemonCards();
 
-        // Toggle Dark Mode
         const toggleButton = document.getElementById('toggleColorMode');
         toggleButton.addEventListener('click', function () {
             document.body.classList.toggle('dark-mode');
@@ -382,7 +380,6 @@
             });
         });
 
-        // Footer More/Less Info Toggle
         document.getElementById('toggleFooterInfo').addEventListener('click', () => {
             const footerExtraInfo = document.getElementById('footerExtraInfo');
             if (footerExtraInfo.style.display === 'none') {
