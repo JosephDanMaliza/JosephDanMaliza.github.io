@@ -185,7 +185,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Array of Places in Kalos
         const places = [
             {
                 name: "Santalune City",
@@ -229,7 +228,6 @@
             }
         ];
 
-        // Function to create places cards
         function createPlacesCards() {
             const placesCardsContainer = document.getElementById('places-cards');
             places.forEach(place => {
@@ -248,11 +246,11 @@
             });
         }
 
-        // Initialize the cards
+
         createPlacesCards();
 
 
-        // Dark Mode Toggle
+        
         document.getElementById('toggleDarkMode').addEventListener('click', function () {
             document.body.classList.toggle('dark-mode');
             document.querySelector('nav').classList.toggle('dark-mode');
