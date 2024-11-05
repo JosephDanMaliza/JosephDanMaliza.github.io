@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalos Gym Leaders and Elite Four</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(90deg, #1a4daa, #8e8ee9);
+            color: #ffffff;
+        }
+
+        nav {
+            background: linear-gradient(90deg, #1a4daa, #8e8ee9);
+        }
+
+        nav .navbar-brand,
+        nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        nav .nav-link:hover {
+            color: #040a11 !important;
+        }
+
+        nav .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        nav .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .header img {
+            max-height: 600px;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            margin-top: -60px; 
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        footer {
+            background-color: #1a4daa;
+            padding: 20px 0;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer.dark-mode {
+            background-color: #1e1e1e; 
+            color: #ffffff; 
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+        }
+
+        .card-body {
+            padding: 20px;
+            color: #000000; 
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s;
+            transition: color 0.3s ease; 
+        }
+
+        .card:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+            background-color: #f0f0f0; 
+        }
+
+        .card:hover .card-body {
+            background-color: #e0e0e0; 
+            color: #3066ca; 
+        }
+
+        body.dark-mode {
+            background: #121212;
+            color: #ffffff;
+        }
+
+        nav.dark-mode {
+            background: #1e1e1e;
+        }
+
+        nav.dark-mode .navbar-brand,
+        nav.dark-mode .nav-link {
+            color: #ffffff !important;
+        }
+
+        .card.dark-mode {
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
+
+        .card.dark-mode .card-body {
+            background-color: #3a3a3a; 
+            color: #ffffff; 
+        }
+
+        .btn-toggle-dark-mode {
+            color: #ffffff;
+            background-color: #040a11;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Kalos Region</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="places.html">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="opponents.html">Opponents</a>
+                </li>
+                <li class="nav-item">
+                    <button id="toggleDarkMode" class="btn-toggle-dark-mode ml-3"> Dark Mode</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <img src="./opponents/battling.jpg" alt="Kalos Region" class="img-fluid">
+        <h1>Explore the Places in Kalos</h1>
+        <p>Discover the breathtaking locations across the Kalos region!</p>
+    </div>
+
+    <div class="container section" id="gymLeadersSection">
+        <h2 class="text-center">Gym Leaders</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/viola.jpg" alt="Viola" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Viola</h4>
+                        <p class="card-text">The Bug-type Gym Leader from Santalune City.</p>
+                        <p class="card-text">Pokémon: Surskit & Vivillon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/grant.jpg" alt="Grant" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Grant</h4>
+                        <p class="card-text">The Rock-type Gym Leader from Cyllage City.</p>
+                        <p class="card-text">Pokémon: Amaura & Tyrunt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/korrina.jpg" alt="Korrina" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Korrina</h4>
+                        <p class="card-text">The Fighting-type Gym Leader from Shalour City.</p>
+                        <p class="card-text">Pokémon: Mienfoo, Hawlucha & Machoke</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/ramos.jpg" alt="Ramos" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Ramos</h4>
+                        <p class="card-text">The Grass-type Gym Leader from Coumarine City.</p>
+                        <p class="card-text">Pokémon: Weepinbell, Jumpluff & Gogoat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/clemont.jpg" alt="Clemont" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Clemont</h4>
+                        <p class="card-text">The Electric-type Gym Leader from Lumiose City.</p>
+                        <p class="card-text">Pokémon: Emolga, Magneton & Helioptile</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/valerie.jpg" alt="Valerie" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Valerie</h4>
+                        <p class="card-text">The Fairy-type Gym Leader from Laverre City.</p>
+                        <p class="card-text">Pokémon: Mawile, Mr. Mime & Sylveon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/olympia.jpg" alt="Olympia" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Olympia</h4>
+                        <p class="card-text">The Psychic-type Gym Leader from Anistar City.</p>
+                        <p class="card-text">Pokémon: Sigilyph, Meowstic & Girafarig</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/wulfric.jpg" alt="Wulfric" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Wulfric</h4>
+                        <p class="card-text">The Ice-type Gym Leader from Snowbelle City.</p>
+                        <p class="card-text">Pokémon: Beartic, Cryogonal & Abomasnow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section" id="pokemonLeagueSection">
+        <h2 class="text-center">Pokemon League</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/malva.jpg" alt="Malva" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Malva</h4>
+                        <p class="card-text">The Fire-type member of the Elite Four.</p>
+                        <p class="card-text">Pokémon: Pyroar, Torkoal, Chandelure & Talonflame</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/wikstrom.jpg" alt="Wikstrom" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Wikstrom</h4>
+                        <p class="card-text">The Steel-type member of the Elite Four.</p>
+                        <p class="card-text">Pokémon: Klefki, Probopass, Scizor & Aegislash</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/drasna.jpg" alt="Drasna" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Drasna</h4>
+                        <p class="card-text">The Dragon-type member of the Elite Four.</p>
+                        <p class="card-text">Pokémon: Dragalge, Altaria, Druddigon & Noivern</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/siebold.jpg" alt="Siebold" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Siebold</h4>
+                        <p class="card-text">The Steel-type member of the Elite Four.</p>
+                        <p class="card-text">Pokémon: Clawitzer, Starmie, Gyarados & Barbaracle</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="./opponents/diantha.jpg" alt="Diantha" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Diantha</h4>
+                        <p class="card-text">The Champion of the Kalos region.</p>
+                        <p class="card-text">Pokémon: Hawlucha, Tyrantrum, Goodra, Aurorus, Gourgeist & Mega Gardevoir</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kalos Region. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('toggleDarkMode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('nav').classList.toggle('dark-mode');
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.classList.toggle('dark-mode');
+            });
+            const footer = document.querySelector('footer');
+            footer.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+
+</html>
