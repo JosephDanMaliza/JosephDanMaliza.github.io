@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall of Asia - Home</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(90deg, #1a4daa, #8e8ee9);
+            color: #ffffff;
+        }
+
+        nav {
+            background: linear-gradient(90deg, #1a4daa, #8e8ee9);
+        }
+
+        nav .navbar-brand,
+        nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        nav .nav-link:hover {
+            color: #040a11 !important;
+        }
+
+        nav .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        nav .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .header img {
+            max-height: 600px;
+            object-fit: cover;
+            width: 100%;
+            height: auto; 
+        }
+
+        .header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3.5rem; 
+            font-weight: 600;
+            margin-top: -200px;
+        }
+
+        .header p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.1rem; 
+            margin-top: 15px;
+        }
+
+        .header .cta-button {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header .cta-button a {
+            background-color: #fdfdfd;
+            color: #1a4daa;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .header .cta-button a:hover {
+            background-color: #040a11;
+            color: #ffffff;
+        }
+
+        .history-section {
+            margin: 60px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 850px;
+        }
+
+        .history-section h2 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .history-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .cards-section {
+            margin-top: 40px;
+        }
+
+        .card {
+            margin: 15px; 
+        }
+
+        footer {
+            background-color: #1a4daa;
+            padding: 20px 0;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem; 
+            }
+
+            .header p {
+                font-size: 1rem; 
+            }
+
+            .history-section h2 {
+                font-size: 2rem; 
+            }
+
+            .history-section p {
+                font-size: 1rem; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">🌎 SM MoA | Mall of Asia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="restaurant.html">Restaurants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="entertainment.html">Entertainment</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <img src="moaFront.jpg" alt="SM Mall of Asia" class="img-fluid">
+        <div class="overlay"></div>
+        <h1>Welcome to SM Mall of Asia</h1>
+        <p>Your ultimate shopping, dining, and entertainment destination in Pasay City.</p>
+        <div class="cta-button">
+            <a href="#cardsSection">Explore Now</a>
+        </div>
+    </div>
+
+    <div class="container history-section">
+        <h2>History of the Mall of Asia</h2>
+        <p>The Mall of Asia (MoA) is one of the largest shopping malls in the Philippines, opened to the public in 2006.
+        Located in Pasay City, it is a shopping destination as well as a cultural and entertainment hub. Developed by SM Prime
+        Holdings, MoA features over 600 retail shops, a wide variety of restaurants, an IMAX theater, and an amusement park.
+        It is a significant landmark in Metro Manila and has hosted numerous events, concerts, and exhibitions.</p>
+        
+        <p>MoA is composed of four interconnected buildings: the Main Mall, Entertainment Mall, and the North and South Parking
+        areas, connected via walkways for convenience. It used to be the biggest mall in the country before the expansions of
+        SM North Edsa and SM Megamall. MoA is also known for its spacious parking and iconic globe made of steel frames and LED lights.</p>
+        
+        <p>The mall is home to the first Olympic-sized ice skating rink in Southeast Asia, the first-ever IMAX theater in the Philippines,
+        and the SM By The Bay amusement park, offering plenty of activities inside and outside the mall for all visitors to enjoy.</p>
+    </div>
+
+    <div class="container cards-section" id="cardsSection">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card bg-light text-dark">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Restaurants</h5>
+                        <p class="card-text">Explore our world-class restaurants with a variety of cuisines.</p>
+                        <a href="restaurant.html" class="btn btn-primary">View Restaurants</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-light text-dark">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Entertainment</h5>
+                        <p class="card-text">Experience world-class entertainment and events.</p>
+                        <a href="entertainment.html" class="btn btn-primary">View Entertainment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; for school purposes only.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
