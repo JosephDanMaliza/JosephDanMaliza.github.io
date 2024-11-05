@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digimon Gallery</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom styles for the menu button */
+    .menu-btn {
+      background-color: rgba(255, 215, 0, 0.8); 
+      color: black; 
+      border: none; 
+      font-size: 1em; /* Smaller font size */
+      padding: 6px 12px; /* Reduced padding */
+      position: absolute; 
+      top: 20px; 
+      left: 20px; 
+      z-index: 1; 
+      border-radius: 15px; 
+    }
+    .menu-btn:hover {
+      background-color: rgba(255, 215, 0, 1); 
+      color: black; 
+    }
+
+    /* Styles for pagination buttons */
+    .btn-secondary {
+      font-size: 0.9em; /* Slightly smaller font size */
+      padding: 6px 10px; /* Reduced padding */
+      margin: 2px; /* Smaller margin */
+    }
+  </style>
+</head>
+<body>
+  <button class="menu-btn" onclick="window.location.href='menu.html'">Menu</button> 
+  <div class="container text-center my-4">
+    <h1 class="display-4">Digimon Gallery</h1>
+    <p class="lead">Explore the world of Digimon!</p>
+    <div id="gallery" class="row"></div>
+    <div class="mt-4">
+      <button id="back-btn" class="btn btn-secondary" onclick="window.location.href='index.html?page=1'">Back to Start</button>
+      <button id="prev-btn" class="btn btn-secondary" onclick="changePage(currentPage - 1)">Previous</button>
+      <span id="page-number">Page 1</span>
+      <button id="next-btn" class="btn btn-secondary" onclick="changePage(currentPage + 1)">Next</button>
+      <button id="latest-btn" class="btn btn-secondary" id="latest-button">Latest</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    let currentPage = 1; 
+    let totalDigimons = 0; 
+    const perPage = 18; 
+
+    $(document).ready(function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      currentPage = parseInt(urlParams.get("page")) || 1; 
+
+      fetchTotalCount().then(() => fetchCharacters(currentPage));
+    });
+
+    function fetchTotalCount() {
+      return $.get(`https://digimon-api.vercel.app/api/digimon`).then(data => {
+        totalDigimons = data.length; 
+        const lastPage = Math.ceil(totalDigimons / perPage); 
+        $("#latest-btn").attr("onclick", `changePage(${lastPage})`); 
+      });
+    }
+
+    function fetchCharacters(page) {
+      const offset = (page - 1) * perPage;
+
+      $.get(`https://digimon-api.vercel.app/api/digimon`, function(data) {
+        const digimons = data.slice(offset, offset + perPage);
+
+        renderDigimons(digimons);
+        $("#page-number").text(`Page ${page}`); 
+      });
+    }
+
+    function renderDigimons(digimons) {
+      const gallery = $("#gallery");
+      gallery.empty(); 
+      digimons.forEach(digimon => {
+        const digimonCard = `
+          <div class="col-md-4">
+            <div class="card">
+              <img src="${digimon.img}" class="card-img-top" alt="${digimon.name}">
+              <div class="card-body">
+                <h5 class="card-title">${digimon.name}</h5>
+                <p class="card-text">Level: ${digimon.level}</p>
+                <a href="view.html?name=${digimon.name}&page=${currentPage}" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+        `;
+        gallery.append(digimonCard);
+      });
+    }
+
+    function changePage(page) {
+      if (page < 1 || page > Math.ceil(totalDigimons / perPage)) return; 
+      currentPage = page;
+      fetchCharacters(currentPage); 
+    }
+  </script>
+</body>
+</html>
