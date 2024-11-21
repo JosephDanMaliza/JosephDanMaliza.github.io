@@ -1,0 +1,289 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    background: linear-gradient(to right, #161016, #401a53);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1, h2, h3, p {
+    color: #ddd0dd;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #E3A5D3;
+    text-align: center;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8), 0 0 25px rgba(240, 52, 152, 0.6);
+    letter-spacing: 3px;
+    animation: glowing-text 1.5s infinite alternate;
+}
+
+p {
+    color: #e9e7e7;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 15px rgba(240, 52, 152, 0.5);
+    letter-spacing: 1px;
+    font-style: italic;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+
+
+@keyframes glowing-text {
+    0% {
+        color: #E3A5D3;
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8), 0 0 25px rgba(240, 52, 152, 0.6);
+    }
+    100% {
+        color: #F0F2F8;
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(240, 52, 152, 1);
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container iframe {
+    width: 90%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#main-characters-section {
+    background: linear-gradient(to right, #161016, #401a53);
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#main-characters-section h2 {
+    font-size: 2.5rem;
+    color: #D8BFD8;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+#main-characters-section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#main-characters-section .card {
+    background: #5e3b6e;
+    width: 300px;
+    height: 400px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#main-characters-section .card h3 {
+    font-size: 1.30rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#main-characters-section .card p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+#main-characters-section .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+#main-characters-section .card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+#main-characters-section .card:active {
+    animation: card-click 0.3s ease forwards;
+}
+
+@keyframes card-click {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width: 700px) {
+    #main-characters-section .card {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-characters-section .card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#episodes-section {
+    background: linear-gradient(to right, #161016, #401a53);
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#episodes-section h2 {
+    font-size: 2.5rem;
+    color: #D8BFD8;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+#episodes-section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#episodes-section .card {
+    background: #5e3b6e;
+    width: 300px;
+    height: 400px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#episodes-section .card h3 {
+    font-size: 1.30rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#episodes-section .card p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+#episodes-section .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+#episodes-section .card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+#episodes-section .card:active {
+    animation: card-click 0.3s ease forwards;
+}
+
+@media (max-width: 700px) {
+    #episodes-section .card {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #episodes-section .card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+footer {
+    background: linear-gradient(to right, #401a53, #161016);
+    color: #D8BFD8;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 0;
+    color: #A9A9A9;
+    letter-spacing: 1px;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
