@@ -91,14 +91,14 @@ h1, h2, h3, h4, h5, h6 {
 .card-title {
   font-family: 'Poppins', sans-serif;
   color: #FFD700;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .custom-card .card-text,
 .card-text {
   font-family: 'Fredoka', sans-serif;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
 }
 
 /* Mobile view */
