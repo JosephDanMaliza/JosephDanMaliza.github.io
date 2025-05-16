@@ -1,5 +1,7 @@
 let currentReceipt = [];
 var total = 0;
+var categories = [];
+var products = [];
 
 const getAllCategories = async () => {
     fetch(
@@ -140,5 +142,4 @@ document.getElementById("totalValue").innerText = "0";
 
 window.onload = function() {
     getAllCategories();
-    getAllProducts();
 };
