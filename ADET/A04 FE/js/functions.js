@@ -1,38 +1,6 @@
 let currentReceipt = [];
 var total = 0;
 
-const getAllCategories = async () => {
-    fetch(
-        'http://localhost/WEBDEV AND APPDEV/JosephDanMaliza.github.io/ADET/A06/categories.php'
-    )
-        .then(response => response.json())
-        .then(data => {
-            categories = data;
-            loadCategories();
-        });
-};
-
-const getAllProducts = async (category_id) => {
-    const categoryData = {
-        categoryID: categoryID
-    };
-
-    fetch(
-        'http://localhost/WEBDEV AND APPDEV/JosephDanMaliza.github.io/ADET/A06/products.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(categoryData)
-    })
-        .then(response => response.json())
-        .then(data => {
-            products = data;
-            loadProducts(categoryName);
-        });
-};
-
-
 function loadCategories() {
     var categoriesContainer = document.getElementById("categories");
     categoriesContainer.innerHTML = "";
@@ -139,6 +107,6 @@ document.getElementById("totalValue").innerText = "0";
 }
 
 window.onload = function() {
-    getAllCategories();
-    getAllProducts();
+  loadCategories();
+  loadProducts(0);
 };

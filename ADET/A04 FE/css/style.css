@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.navbar {
+    background-color: #e11b22;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+}
+
+button {
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #e11b22;
+    color: white;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c00f1a;
+}
+
+.btn-primary {
+    background-color: #e11b22;
+    border-color: #e11b22;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #c00f1a;
+    border-color: #c00f1a;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.topcontainer {
+    background-color: #f8f9fa;
+}
+
+.maincontainer {
+    background-color: #fffdf7;
+}
+
+
+#categories > * {
+    font-family: 'Quicksand', sans-serif;
+    margin-right: 1rem;
+    font-weight: 600;
+    color: #004fa3;
+}
+
+.custom-product-button {
+    width: 300px;
+    height: 250px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.custom-product-button img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.custom-product-button small {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.custom-product-button button {
+    width: 250px;
+    height: 50px;
+    padding: 10px 17px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #e11b22;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-product-button button:hover {
+    background-color: #c00f1a;
+}
+
+#receipt {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#totalValue {
+    font-size: 1.2rem;
+}
+
+.custom-button {
+    cursor: pointer;
+}
+
