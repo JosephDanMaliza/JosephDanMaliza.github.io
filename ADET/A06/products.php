@@ -19,30 +19,50 @@ switch ($method) {
     echo json_encode(['message' => 'Invalid request method']);
     break;
 }
-
 function handlePost($pdo, $input)
 {
-  if (isset($input['categoryID'])) {
-    $sql = "SELECT * FROM products WHERE categoryID = :categoryID";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(['categoryID' => $input['categoryID']]);
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($result);
-  } else {
-    echo json_encode(['message' => 'categoryID is required']);
-  }
+    if (isset($input['categoryID'])) {
+        $sql = "SELECT * FROM products WHERE categoryID = :categoryID";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['categoryID' => $input['categoryID']]);
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($products as &$product) {
+            $sqlSizes = "SELECT sizeCode, price FROM product_sizes WHERE productID = :productID";
+            $stmtSizes = $pdo->prepare($sqlSizes);
+            $stmtSizes->execute(['productID' => $product['productID']]);
+            $sizes = $stmtSizes->fetchAll(PDO::FETCH_ASSOC);
+
+            $product['sizes'] = $sizes;
+        }
+
+        echo json_encode($products);
+    } else {
+        echo json_encode(['message' => 'categoryID is required']);
+    }
 }
 
 function handleGet($pdo, $queryParams)
 {
-  if (isset($queryParams['categoryID'])) {
-    $sql = "SELECT * FROM products WHERE categoryID = :categoryID";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(['categoryID' => $queryParams['categoryID']]);
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($result);
-  } else {
-    echo json_encode(['message' => 'categoryID is required']);
-  }
+    if (isset($queryParams['categoryID'])) {
+        $sql = "SELECT * FROM products WHERE categoryID = :categoryID";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['categoryID' => $queryParams['categoryID']]);
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($products as &$product) {
+            $sqlSizes = "SELECT sizeCode, price FROM product_sizes WHERE productID = :productID";
+            $stmtSizes = $pdo->prepare($sqlSizes);
+            $stmtSizes->execute(['productID' => $product['productID']]);
+            $sizes = $stmtSizes->fetchAll(PDO::FETCH_ASSOC);
+
+            $product['sizes'] = $sizes;
+        }
+
+        echo json_encode($products);
+    } else {
+        echo json_encode(['message' => 'categoryID is required']);
+    }
 }
+
 ?>
