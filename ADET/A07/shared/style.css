@@ -113,6 +113,32 @@ iframe#quoteFrame {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3e8ff; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d3a5ff; 
+  border-radius: 10px;
+  border: 2px solid #f3e8ff; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b37edc; 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d3a5ff #f3e8ff;
+}
+
 @media (max-width: 1000px), (max-width: 780px) {
   body::before {
     height: 900px;
