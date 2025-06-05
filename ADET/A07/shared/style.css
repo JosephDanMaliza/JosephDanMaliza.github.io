@@ -1,0 +1,120 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: #b38cdd;
+  font-family: 'Fredoka', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  min-height: 600px;
+  background-image: url("assets/prideMonth.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.navbar {
+  background-color: #9d75c6 !important;
+  z-index: 1050;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-toggler {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1100;
+}
+
+.navbar a,
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.btn-primary {
+  background-color: #fbcfe8;
+  border-color: #fbcfe8;
+  color: #3a3a3a;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #f9a8d4;
+  border-color: #f9a8d4;
+  color: #222;
+}
+
+section.bg-white {
+  background-color: #ffffff !important;
+}
+
+section.bg-light {
+  background-color: #fff5ec !important;
+}
+
+h2.fw-bold {
+  color: #231233;
+}
+
+.text-primary {
+  color: #ab4ccf !important;
+}
+
+.text-success {
+  color: #4bb38a !important;
+}
+
+.card {
+  background-color: #e9b8cb;
+  border: none;
+  color: #4d3c5e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(155, 108, 200, 0.2);
+  background-color: #ffe1ee;
+  color: #3a2a50;
+}
+
+.card p {
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+iframe#quoteFrame {
+  width: 100%;
+  max-width: 800px;
+  max-height: 200px;
+  min-width: 300px;
+  min-height: 100px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1000px), (max-width: 780px) {
+  body::before {
+    height: 900px;
+  }
+}
