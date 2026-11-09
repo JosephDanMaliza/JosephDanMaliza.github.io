@@ -3,32 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JDAM Projects</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/portfolioImgs/rowlett.png" type="image/png">
+  <title>Projects | Joseph Daniel Maliza</title>
+
+  <!-- Bootstrap 5 & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="assets/global.css">
+  <link rel="stylesheet" href="assets/projects.css">
+  <link rel="icon" href="assets/portfolioImgs/JD_Logo.png" type="image/png">
 </head>
-<body>
+<body class="portfolio-page">
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">JDAM!</a>
-    </div>
-  </nav>
+  <canvas id="hyperspace" aria-hidden="true"></canvas>
+  <!-- Navigation Capsule -->
+  <header class="navbar-wrapper container-fluid px-3 px-lg-5 pt-3 pt-md-4 flex-shrink-0">
+    <nav class="navbar navbar-expand-lg header-pill mx-auto">
+      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+        
+        <!-- Left Responsive Logo -->
+        <a class="navbar-brand d-flex align-items-center m-0 py-0" href="index.html">
+          <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo" onerror="this.src='https://placehold.co/60x60/1b4776/ffffff?text=JD'">
+        </a>
 
-  <section class="py-5">
-    <section class="py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Explore My Projects</h2>
-        <p>Select a category to view my work.</p>
-        <div class="card bg-light shadow p-4">          
-          <a href="Web Development/webDev.html" class="button">Web Development</a>
-          <a href="ADET/appDev.html" class="button">App Development</a>
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 text-white shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+
+        <!-- Floating Overlay Nav Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navContent">
+          <ul class="navbar-nav gap-1 gap-lg-2 align-items-center my-1 my-lg-0 text-center">
+            <li class="nav-item w-100 w-lg-auto">
+              <a class="nav-link-pill" href="index.html">Home</a>
+            </li>
+            <li class="nav-item w-100 w-lg-auto">
+              <a class="nav-link-pill" href="aboutMe.html">About</a>
+            </li>
+            <li class="nav-item w-100 w-lg-auto">
+              <a class="nav-link-pill active" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item w-100 w-lg-auto">
+              <a class="nav-link-pill" href="contact.html">Contacts</a>
+            </li>
+          </ul>
         </div>
+
+        <!-- Right Balance Spacer for Desktop Symmetry -->
+        <div class="d-none d-lg-block header-spacer" aria-hidden="true"></div>
+
       </div>
-    </section>
-    
-  </section>
+    </nav>
+  </header>
+
+  <!-- Main Projects Dashboard Frame -->
+  <main class="content-container container-fluid px-3 px-lg-5 py-4 flex-grow-1">
+    <div class="projects-master-container p-3 p-md-4">
+      <div class="row g-4 align-items-stretch">
+
+        <!-- Left Sidebar: Project List -->
+        <div class="col-12 col-md-5 col-lg-4 d-flex flex-column">
+          <div class="projects-sidebar-wrapper">
+            <div class="projects-sidebar" id="projectList">
+
+              <button class="project-tab-card active" data-index="0">
+                <div class="tab-title text-truncate">LANDAS: 2D Mobile Game</div>
+                <small class="tab-tag d-block text-truncate">Unity • C# • Educational</small>
+              </button>
+
+              <button class="project-tab-card" data-index="1">
+                <div class="tab-title text-truncate">CentRE Platform &amp; Hub</div>
+                <small class="tab-tag d-block text-truncate">Front-End • QA • UI/UX</small>
+              </button>
+
+              <button class="project-tab-card" data-index="2">
+                <div class="tab-title text-truncate">NowUKnow Portal</div>
+                <small class="tab-tag d-block text-truncate">PHP • MySQL • Bootstrap</small>
+              </button>
+
+              <button class="project-tab-card" data-index="3">
+                <div class="tab-title text-truncate">Celestia Events</div>
+                <small class="tab-tag d-block text-truncate">Community Discovery • CRUD</small>
+              </button>
+
+              <button class="project-tab-card" data-index="4">
+                <div class="tab-title text-truncate">KuroNeko: Journey</div>
+                <small class="tab-tag d-block text-truncate">Java Swing • Desktop Game</small>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Showcase Area (1 Main Image Only) -->
+        <div class="col-12 col-md-7 col-lg-8 d-flex flex-column">
+          <div class="project-showcase-card p-3 p-md-4 p-lg-5 d-flex flex-column justify-content-between">
+            
+            <!-- Single Primary Preview Screen -->
+            <div class="showcase-screen-box mb-4">
+              <img id="showcaseImage" 
+                   src="assets/portfolioImgs/landas.jpg" 
+                   alt="Project Preview" 
+                   class="showcase-img"
+                   onerror="this.src='https://placehold.co/1200x675/113355/ffffff?text=Project+Preview+Screen'">
+            </div>
+
+            <!-- Content Area -->
+            <div class="showcase-info-box">
+              <h2 id="showcaseTitle" class="project-display-title mb-2">LANDAS: 2D Gamified Mobile Application</h2>
+              <p id="showcaseDesc" class="project-display-desc mb-3">
+                A 2D gamified Philippine history educational mobile game built to deliver immersive cultural learning. Commended for strict compliance with ISO/IEC 25010 software quality benchmarks and recognized with the Best in Capstone Project award.
+              </p>
+
+              <div class="neon-pill-group d-flex flex-wrap gap-2 mb-4" id="techPillContainer">
+                <span class="neon-tech-pill">Unity 2D</span>
+                <span class="neon-tech-pill">C# Scripting</span>
+                <span class="neon-tech-pill">Game Design</span>
+              </div>
+
+              <div class="project-actions d-flex flex-wrap gap-3">
+                <!-- Button triggers Bootstrap Modal -->
+                <button type="button" id="btnDetails" class="btn-more-details flex-grow-1 flex-sm-grow-0 border-0" data-bs-toggle="modal" data-bs-target="#projectGalleryModal">
+                  <i class="fas fa-images me-2"></i>More Details
+                </button>
+                <a id="btnWebsite" href="https://landas2d.github.io/" target="_blank" class="btn-view-website flex-grow-1 flex-sm-grow-0 d-inline-flex">
+                  <i class="fas fa-arrow-up-right-from-square me-2"></i>View Website
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Project Details & Gallery Modal -->
+  <div class="modal fade" id="projectGalleryModal" tabindex="-1" aria-labelledby="modalProjectTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content project-modal-content">
+        
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <h3 class="modal-title fw-bold text-white mb-1" id="modalProjectTitle">Project Title</h3>
+            <div class="d-flex flex-wrap gap-2 pt-1" id="modalTechPills"></div>
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body py-4">
+          <!-- Featured Selected Modal Image -->
+          <div class="modal-screen-preview mb-3">
+            <img id="modalMainImg" src="" alt="Project Screenshot Full" class="modal-featured-img">
+          </div>
+
+          <!-- Thumbnails Row for Switching -->
+          <div class="modal-gallery-strip d-flex gap-2 pb-3 mb-3 overflow-auto" id="modalGalleryThumbnails">
+            <!-- Dynamically injected thumbnails -->
+          </div>
+
+          <!-- Description -->
+          <div class="modal-desc-box p-3 rounded-3">
+            <h6 class="text-info fw-semibold mb-1"><i class="fas fa-circle-info me-2"></i>Overview &amp; Implementation</h6>
+            <p id="modalProjectDesc" class="text-light opacity-90 small mb-0"></p>
+          </div>
+        </div>
+
+        <div class="modal-footer border-0 pt-0 d-flex justify-content-between">
+          <a id="modalWebsiteBtn" href="#" target="_blank" class="btn-view-website d-inline-flex">
+            <i class="fas fa-arrow-up-right-from-square me-2"></i>Visit Live Website
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Responsive Footer -->
+  <footer class="footer-strip py-3 px-3 px-lg-5 mt-auto">
+    <div class="container-fluid d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2 p-0">
+      <div class="footer-logo">
+        <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo-small" onerror="this.src='https://placehold.co/42x42/1b4776/ffffff?text=JD'">
+      </div>
+      <div class="footer-copyright text-center">
+        <span>© 2026 Joseph Maliza. All Rights Reserved</span>
+      </div>
+      <div style="width: 32px;" class="d-none d-sm-block"></div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- External Script -->
+  <script src="js/projects.js"></script>
+  <script src="js/stars.js"></script>
+
 
 </body>
 </html>

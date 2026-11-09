@@ -1,0 +1,376 @@
+/*  About Page Hero Split Card */
+.about-hero-card {
+  background: rgba(16, 48, 80, 0.45);
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-photo-box {
+  position: relative;
+  min-height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid rgba(82, 146, 212, 0.5);
+  cursor: pointer;
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.25s ease;
+}
+
+.hero-portrait-img.photo-fade {
+  opacity: 0.15;
+}
+
+.photo-hint-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(3, 20, 39, 0.8);
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.hero-photo-box:hover .photo-hint-tag {
+  opacity: 1;
+}
+
+.section-tag-small {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.hero-name-heading {
+  font-family: 'Lora', serif;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+}
+
+.hero-role-line {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.role-a-prefix {
+  margin-right: 8px;
+}
+
+.about-bio-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Metric Stats Row */
+.stat-number {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  font-weight: 500;
+  color: #38bdf8;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.stat-sup {
+  font-size: 0.7em;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.55rem, 0.75vw, 0.72rem);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Interactive Flip Cards (Fun Facts) */
+.flip-card {
+  flex: 0 0 240px;
+  min-width: 240px;
+  height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+.flip-card-front {
+  background: var(--card-light-blue);
+  color: #031427;
+}
+
+.flip-card-front h4 {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.flip-card-back {
+  background: var(--navbar-blue);
+  color: #fff;
+  transform: rotateY(180deg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*  Certifications & Hobbies Cards */
+.cert-card,
+.hobby-card {
+  flex: 0 0 310px;
+  min-width: 310px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-card:hover,
+.hobby-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(47, 131, 200, 0.3);
+}
+
+.cert-img-box {
+  width: 100%;
+  height: 160px;
+  background: #184775;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-title {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.hobby-icon-box {
+  height: 120px;
+  background: var(--card-light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  color: #031427;
+}
+
+/*  Infinite Auto-Scroll Skills Marquee & Tech Badges */
+.skills-marquee-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+}
+
+.marquee-group {
+  display: flex;
+  gap: 12px;
+  animation: scrollMarquee 26s linear infinite;
+}
+
+.skills-marquee-container:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.bg-html5 { background: #e34f26; }
+.bg-css3 { background: #1572b6; }
+.bg-js { background: #f7df1e; color: #000; }
+.bg-bootstrap { background: #7952b3; }
+.bg-php { background: #777bb4; }
+.bg-java { background: #e76f00; }
+.bg-python { background: #3776ab; }
+.bg-mysql { background: #00758f; }
+.bg-git { background: #f05032; }
+.bg-github { background: #181717; }
+.bg-vscode { background: #007acc; }
+.bg-figma { background: #f24e1e; }
+.bg-photoshop { background: #31a8ff; }
+.bg-canva { background: #00c4cc; }
+.bg-xampp { background: #fb7a24; }
+.bg-laravel { background: #ff2d20; }
+.bg-alpine { background: #77c1d2; color: #000; }
+.bg-node { background: #339933; }
+.bg-tailwind { background: #06b6d4; }
+.bg-notion,
+.bg-unity { background: #000; border: 1px solid rgba(255, 255, 255, 0.2); }
+
+@media (max-width: 991px) {
+  .hero-photo-box {
+    min-height: 300px;
+  }
+}
+
+#aboutHeroImg {
+  transition: opacity 0.4s ease-in-out;
+}
+
+#aboutHeroImg.fade-out {
+  opacity: 0;
+}
+
+/* Enlarged Hobby Card Dimensions */
+.hobby-card {
+  flex: 0 0 320px;
+  width: 320px;
+  min-height: 400px;
+  background: rgba(12, 28, 48, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(82, 146, 212, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(118, 178, 240, 0.6);
+  box-shadow: 0 10px 24px rgba(7, 24, 46, 0.5);
+}
+
+/* Image Wrapper with Quick Hint Overlay */
+.hobby-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #091726;
+}
+
+.hobby-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.hobby-card-img.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+/* Floating Corner Hint Badge */
+.hobby-flip-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: rgba(3, 15, 30, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.75rem;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.hobby-img-wrapper:hover .hobby-flip-badge {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/* Floating Icon Box overlaying the bottom corner */
+.hobby-img-wrapper .hobby-icon-box {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  background: rgba(14, 38, 66, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(74, 144, 226, 0.4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #76b2f0;
+  font-size: 1.1rem;
+}
+
+/* Card Body Typography */
+.hobby-meta {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

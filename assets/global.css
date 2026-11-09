@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Root Variables & Base Reset
+   ========================================================================== */
+:root {
+  --bg-navy: #031427;
+  --navbar-blue: #184775;
+  --nav-btn-active: #2f83c8;
+  --accent-border: #4a90e2;
+  --accent-glow: #3b82f6;
+  --badge-border: #2e6293;
+  --badge-active-bg: #1e5a8f;
+  --card-bg: #113355;
+  --card-light-blue: #5b9bd5;
+  --border-light: rgba(255, 255, 255, 0.12);
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.portfolio-page {
+  background-color: var(--bg-navy);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+}
+/* Navigation Capsule & Floating Menu */
+.navbar-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1100;
+}
+
+.header-pill {
+  position: relative;
+  background: var(--navbar-blue);
+  border-radius: 60px;
+  border: 1px solid var(--border-light);
+  padding: 6px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: border-radius 0.3s ease;
+}
+
+/* Logo */
+.brand-logo {
+  height: clamp(32px, 4.5vw, 46px);
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.04);
+}
+
+.header-spacer {
+  width: clamp(32px, 4.5vw, 46px);
+}
+
+/* Nav Link Pills */
+.nav-link-pill {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 40px;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.nav-link-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.nav-link-pill.active {
+  background: var(--nav-btn-active);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Mobile Floating Dropdown */
+@media (max-width: 991.98px) {
+  .header-pill {
+    border-radius: 28px;
+    padding: 8px 16px;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background: rgba(15, 38, 64, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 16px 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    z-index: 1200; /* Floats over the hero content */
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-link-pill {
+    width: 100%;
+    padding: 10px 16px;
+    text-align: center;
+  }
+}
+/* Custom Slim Blue Scrollbar */
+.custom-scrollbar-carousel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 rgba(255, 255, 255, 0.05);
+}
+
+.custom-scrollbar-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar-carousel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar-carousel::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-scrollbar-carousel::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.9);
+}
+
+/* Shared Typography & Glass Containers */
+.section-heading {
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.glass-carousel-container,
+.glass-timeline-container,
+.skills-marquee-container {
+  background: rgba(16, 48, 80, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+/* Universal Footer*/
+.footer-strip {
+  background: var(--navbar-blue);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-logo-small {
+  height: 36px;
+  object-fit: contain;
+}
+
+.footer-spacer {
+  width: 36px;
+}
+
+.footer-copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .footer-copyright {
+    position: static;
+    transform: none;
+    font-size: 0.8rem;
+    white-space: normal;
+  }
+}
+
+#hyperspace {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}

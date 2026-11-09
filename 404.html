@@ -1,169 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Unavailable</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Out of Bounds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/404.css">
 
-    <style>
-        @keyframes gradientAnimation {
-            0% {
-                background: linear-gradient(to right, #1e6e1e, #0c250c);
-            }
-            50% {
-                background: linear-gradient(to right, #1e250c, #1e6e1e);
-            }
-            100% {
-                background: linear-gradient(to right, #0c250c, #1e6e1e);
-            }
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Lora', serif;
-            animation: gradientAnimation 8s ease infinite;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
-            flex-direction: column;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .background-effects {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('your-image.jpg') no-repeat center center / cover;
-            opacity: 0.25;
-            pointer-events: none;
-        }
-
-        .floating-dots {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 50px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.6);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .dot:nth-child(1) { animation-delay:  0s; }
-        .dot:nth-child(2) { animation-delay:  1s; }
-        .dot:nth-child(3) { animation-delay:  2s; }
-        .dot:nth-child(4) { animation-delay:  3s; }
-        .dot:nth-child(5) { animation-delay:  4s; }
-        .dot:nth-child(6) { animation-delay:  5s; }
-        .dot:nth-child(7) { animation-delay:  6s; }
-        .dot:nth-child(8) { animation-delay:  7s; }
-        .dot:nth-child(9) { animation-delay:  8s; }
-        .dot:nth-child(10) { animation-delay: 9s; }
-        .dot:nth-child(11) { animation-delay: 10s; }
-        .dot:nth-child(12) { animation-delay: 11s; }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-30px); }
-            100% { transform: translateY(0); }
-        }
-
-        .card.custom-card {
-            background-color: #0B3D0B; 
-            border: 1px solid #1B5E20; 
-            color: #E0F2F1; 
-            border-radius: 10px; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card.custom-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); 
-        }
-
-        .card.custom-card .card-body {
-            padding: 30px;
-        }
-
-        .card.custom-card .card-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #A5D6A7; 
-            margin-bottom: 15px;
-        }
-
-        .card.custom-card .card-text {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            color: #C8E6C9;
-            margin-bottom: 20px;
-        }
-
-        .card.custom-card .btn {
-            background-color: #2E7D32; 
-            color: #FFFFFF; 
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .card.custom-card .btn:hover {
-            background-color: #4CAF50; 
-            transform: scale(1.05); 
-        }
-    </style>
-    <link rel="icon" href="portfolioImgs/rowlett.png" type="image/png">
 </head>
-<body>
-    <div class="background-effects"></div>
+<body class="flex items-center justify-center min-h-screen">
 
-    <div class="container">
-        <div class="card custom-card">
-            <div class="card-body">
-                <h1 class="card-title">404 - Page Not Found</h1>
-                <p class="card-text">
-                    Oops! The page you're looking for isn't available. 
-                    Please check the URL or return to the homepage.
-                </p>
-                <a href="javascript:history.back()" class="btn">Go Back</a>
-            </div>
-        </div>        
-    </div>
+  <div class="viewport-canvas">
+    <svg
+      class="scene-svg"
+      viewBox="0 0 1920 1200"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <!-- Standard diamond constellation star node centered at (0,0) -->
+        <g id="star-node">
+          <polygon points="0,-4 3.2,0 0,4 -3.2,0" fill="#6bcaff" />
+          <polygon points="0,-8 1.2,0 0,8 -1.2,0" fill="#ffffff" />
+          <polygon points="-8,0 0,1.2 8,0 0,-1.2" fill="#ffffff" />
+          <circle cx="0" cy="0" r="1.5" fill="#ffffff" />
+        </g>
 
-    <div class="floating-dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
+        <!-- Slightly larger star for primary junction vertices -->
+        <g id="star-node-lg">
+          <polygon points="0,-5.5 4.5,0 0,5.5 -4.5,0" fill="#4bbaff" />
+          <polygon points="0,-10 1.6,0 0,10 -1.6,0" fill="#ffffff" />
+          <polygon points="-10,0 0,1.6 10,0 0,-1.6" fill="#ffffff" />
+          <circle cx="0" cy="0" r="2" fill="#ffffff" />
+        </g>
+      </defs>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- 1. TOP-LEFT CONSTELLATION (Taurus Horns)
+           Lines connect directly between star coordinates -->
+      <g id="constellation-top-left">
+        <!-- Connecting Lines -->
+        <line class="const-wire" x1="238" y1="202" x2="344" y2="295" />
+        <line class="const-wire" x1="174" y1="281" x2="308" y2="395" />
+        <line class="const-wire" x1="344" y1="295" x2="354" y2="338" />
+        <line class="const-wire" x1="354" y1="338" x2="344" y2="363" />
+        <line class="const-wire" x1="344" y1="363" x2="378" y2="363" />
+        <line class="const-wire" x1="344" y1="363" x2="308" y2="395" />
+        <line class="const-wire" x1="378" y1="363" x2="386" y2="398" />
+        <line class="const-wire" x1="386" y1="398" x2="437" y2="455" />
+        <line class="const-wire" x1="437" y1="455" x2="544" y2="463" />
+        <line class="const-wire" x1="544" y1="463" x2="558" y2="505" />
+
+        <!-- Star nodes precisely on line joints -->
+        <use href="#star-node" x="238" y="202" class="joint-star" style="animation-delay: 0.20s;" />
+        <use href="#star-node" x="344" y="295" class="joint-star" style="animation-delay: 0.50s;" />
+        <use href="#star-node" x="354" y="338" class="joint-star" style="animation-delay: 0.80s;" />
+        <use href="#star-node" x="344" y="363" class="joint-star" style="animation-delay: 1.10s;" />
+        <use href="#star-node" x="378" y="363" class="joint-star" style="animation-delay: 1.40s;" />
+        <use href="#star-node" x="386" y="398" class="joint-star" style="animation-delay: 1.70s;" />
+        <use href="#star-node" x="437" y="455" class="joint-star" style="animation-delay: 2.00s;" />
+        <use href="#star-node" x="544" y="463" class="joint-star" style="animation-delay: 2.30s;" />
+        <use href="#star-node" x="558" y="505" class="joint-star" style="animation-delay: 2.60s;" />
+        <use href="#star-node" x="174" y="281" class="joint-star" style="animation-delay: 0.35s;" />
+        <use href="#star-node" x="308" y="395" class="joint-star" style="animation-delay: 1.25s;" />
+      </g>
+
+
+      <!-- 3. TOP-RIGHT CONSTELLATION (Libra / Figures)
+           Intersecting star lines with vertices-->
+      <g id="constellation-top-right">
+        <!-- Connecting Lines -->
+        <line class="const-wire" x1="1465" y1="155" x2="1613" y2="114" />
+        <line class="const-wire" x1="1613" y1="114" x2="1775" y2="256" />
+        <line class="const-wire" x1="1465" y1="155" x2="1609" y2="356" />
+        <line class="const-wire" x1="1613" y1="114" x2="1609" y2="356" />
+        <line class="const-wire" x1="1465" y1="155" x2="1413" y2="356" />
+        <line class="const-wire" x1="1609" y1="356" x2="1657" y2="505" />
+
+        <!-- Star nodes on line joints -->
+        <use href="#star-node" x="1465" y="155" class="joint-star" style="animation-delay: 0.30s;" />
+        <use href="#star-node" x="1613" y="114" class="joint-star" style="animation-delay: 0.65s;" />
+        <use href="#star-node" x="1775" y="256" class="joint-star" style="animation-delay: 1.05s;" />
+        <use href="#star-node" x="1413" y="356" class="joint-star" style="animation-delay: 1.45s;" />
+        <use href="#star-node" x="1609" y="356" class="joint-star" style="animation-delay: 1.85s;" />
+        <use href="#star-node" x="1657" y="505" class="joint-star" style="animation-delay: 2.25s;" />
+      </g>
+
+
+      <!-- 4. BOTTOM-LEFT CONSTELLATION (Kite / Triangular) -->
+      <g id="constellation-bottom-left">
+        <!-- Connecting Lines -->
+        <line class="const-wire" x1="288" y1="692" x2="395" y2="717" />
+        <line class="const-wire" x1="238" y1="733" x2="395" y2="717" />
+        <line class="const-wire" x1="395" y1="717" x2="501" y2="846" />
+        <line class="const-wire" x1="501" y1="846" x2="330" y2="940" />
+        <line class="const-wire" x1="395" y1="717" x2="330" y2="940" />
+        <line class="const-wire" x1="330" y1="940" x2="238" y2="1010" />
+
+        <!-- Star nodes on line joints -->
+        <use href="#star-node" x="288" y="692" class="joint-star" style="animation-delay: 0.40s;" />
+        <use href="#star-node" x="238" y="733" class="joint-star" style="animation-delay: 0.75s;" />
+        <use href="#star-node" x="395" y="717" class="joint-star" style="animation-delay: 1.15s;" />
+        <use href="#star-node" x="501" y="846" class="joint-star" style="animation-delay: 1.55s;" />
+        <use href="#star-node" x="330" y="940" class="joint-star" style="animation-delay: 1.95s;" />
+        <use href="#star-node" x="238" y="1010" class="joint-star" style="animation-delay: 2.35s;" />
+      </g>
+
+
+      <!-- 5. BOTTOM-RIGHT CONSTELLATION (Keystone Loop)-->
+      <g id="constellation-bottom-right">
+        <!-- Connecting Lines -->
+        <line class="const-wire" x1="1424" y1="703" x2="1498" y2="799" />
+        <line class="const-wire" x1="1498" y1="799" x2="1603" y2="781" />
+        <line class="const-wire" x1="1603" y1="781" x2="1690" y2="1002" />
+        <line class="const-wire" x1="1690" y1="1002" x2="1646" y2="1040" />
+        <line class="const-wire" x1="1646" y1="1040" x2="1463" y2="894" />
+        <line class="const-wire" x1="1463" y1="894" x2="1498" y2="799" />
+
+        <!-- Star nodes on line joints -->
+        <use href="#star-node" x="1424" y="703" class="joint-star" style="animation-delay: 0.45s;" />
+        <use href="#star-node" x="1498" y="799" class="joint-star" style="animation-delay: 0.85s;" />
+        <use href="#star-node" x="1603" y="781" class="joint-star" style="animation-delay: 1.25s;" />
+        <use href="#star-node" x="1690" y="1002" class="joint-star" style="animation-delay: 1.65s;" />
+        <use href="#star-node" x="1646" y="1040" class="joint-star" style="animation-delay: 2.05s;" />
+        <use href="#star-node" x="1463" y="894" class="joint-star" style="animation-delay: 2.45s;" />
+      </g>
+
+
+      <!-- 6. CENTERPIECE CONSTELLATION "4 0 4"
+           Every joint/vertex has its dedicated star.-->
+      <g id="constellation-404">
+
+        <!-- FIRST '4' -->
+        <g id="glyph-left-4">
+          <!-- Line loop forming outer polygon of '4' -->
+          <polygon class="const-wire" points="602,328 668,328 668,418 726,418 726,328 788,328 788,418 830,418 830,460 788,460 788,515 726,515 726,460 602,460" />
+          
+          <!-- Diamond stars at each of the 14 vertices of '4' -->
+          <use href="#star-node-lg" x="602" y="328" class="joint-star" style="animation-delay: 0.10s;" />
+          <use href="#star-node-lg" x="668" y="328" class="joint-star" style="animation-delay: 0.35s;" />
+          <use href="#star-node-lg" x="668" y="418" class="joint-star" style="animation-delay: 0.60s;" />
+          <use href="#star-node-lg" x="726" y="418" class="joint-star" style="animation-delay: 0.85s;" />
+          <use href="#star-node-lg" x="726" y="328" class="joint-star" style="animation-delay: 1.10s;" />
+          <use href="#star-node-lg" x="788" y="328" class="joint-star" style="animation-delay: 1.35s;" />
+          <use href="#star-node-lg" x="788" y="418" class="joint-star" style="animation-delay: 1.60s;" />
+          <use href="#star-node-lg" x="830" y="418" class="joint-star" style="animation-delay: 1.85s;" />
+          <use href="#star-node-lg" x="830" y="460" class="joint-star" style="animation-delay: 2.10s;" />
+          <use href="#star-node-lg" x="788" y="460" class="joint-star" style="animation-delay: 2.35s;" />
+          <use href="#star-node-lg" x="788" y="515" class="joint-star" style="animation-delay: 2.60s;" />
+          <use href="#star-node-lg" x="726" y="515" class="joint-star" style="animation-delay: 2.85s;" />
+          <use href="#star-node-lg" x="726" y="460" class="joint-star" style="animation-delay: 3.10s;" />
+          <use href="#star-node-lg" x="602" y="460" class="joint-star" style="animation-delay: 3.35s;" />
+        </g>
+
+        <!-- CENTER '0' -->
+        <g id="glyph-center-0">
+          <!-- Outer square -->
+          <polygon class="const-wire" points="860,328 1038,328 1038,515 860,515" />
+          <!-- Inner square window -->
+          <polygon class="const-wire" points="924,392 970,392 970,455 924,455" />
+
+          <!-- Outer 4 corner stars -->
+          <use href="#star-node-lg" x="860" y="328" class="joint-star" style="animation-delay: 0.25s;" />
+          <use href="#star-node-lg" x="1038" y="328" class="joint-star" style="animation-delay: 0.70s;" />
+          <use href="#star-node-lg" x="1038" y="515" class="joint-star" style="animation-delay: 1.15s;" />
+          <use href="#star-node-lg" x="860" y="515" class="joint-star" style="animation-delay: 1.60s;" />
+
+          <!-- Inner 4 corner stars -->
+          <use href="#star-node" x="924" y="392" class="joint-star" style="animation-delay: 2.05s;" />
+          <use href="#star-node" x="970" y="392" class="joint-star" style="animation-delay: 2.50s;" />
+          <use href="#star-node" x="970" y="455" class="joint-star" style="animation-delay: 2.95s;" />
+          <use href="#star-node" x="924" y="455" class="joint-star" style="animation-delay: 3.40s;" />
+        </g>
+
+        <!-- SECOND '4' -->
+        <g id="glyph-right-4">
+          <!-- Line loop forming outer polygon of '4' -->
+          <polygon class="const-wire" points="1066,328 1132,328 1132,418 1190,418 1190,328 1252,328 1252,418 1294,418 1294,460 1252,460 1252,515 1190,515 1190,460 1066,460" />
+
+          <!-- Diamond stars at each of the 14 vertices of second '4' -->
+          <use href="#star-node-lg" x="1066" y="328" class="joint-star" style="animation-delay: 0.15s;" />
+          <use href="#star-node-lg" x="1132" y="328" class="joint-star" style="animation-delay: 0.40s;" />
+          <use href="#star-node-lg" x="1132" y="418" class="joint-star" style="animation-delay: 0.65s;" />
+          <use href="#star-node-lg" x="1190" y="418" class="joint-star" style="animation-delay: 0.90s;" />
+          <use href="#star-node-lg" x="1190" y="328" class="joint-star" style="animation-delay: 1.15s;" />
+          <use href="#star-node-lg" x="1252" y="328" class="joint-star" style="animation-delay: 1.40s;" />
+          <use href="#star-node-lg" x="1252" y="418" class="joint-star" style="animation-delay: 1.65s;" />
+          <use href="#star-node-lg" x="1294" y="418" class="joint-star" style="animation-delay: 1.90s;" />
+          <use href="#star-node-lg" x="1294" y="460" class="joint-star" style="animation-delay: 2.15s;" />
+          <use href="#star-node-lg" x="1252" y="460" class="joint-star" style="animation-delay: 2.40s;" />
+          <use href="#star-node-lg" x="1252" y="515" class="joint-star" style="animation-delay: 2.65s;" />
+          <use href="#star-node-lg" x="1190" y="515" class="joint-star" style="animation-delay: 2.90s;" />
+          <use href="#star-node-lg" x="1190" y="460" class="joint-star" style="animation-delay: 3.15s;" />
+          <use href="#star-node-lg" x="1066" y="460" class="joint-star" style="animation-delay: 3.40s;" />
+        </g>
+
+      </g>
+
+      <!--  7. TEXT & ACTION BUTTON (Embedded in SVG) -->
+      <g transform="translate(960, 580)">
+        
+        <!-- "Out of Bounds" Heading -->
+        <text
+          x="0"
+          y="0"
+          text-anchor="middle"
+          fill="#ffffff"
+          font-family="'Barlow Semi Condensed', sans-serif"
+          font-size="46"
+          font-weight="600"
+          letter-spacing="0.5px"
+        >Out of Bounds</text>
+
+        <!-- Subheading with lime accent -->
+        <text
+          x="0"
+          y="38"
+          text-anchor="middle"
+          fill="#f0f6fc"
+          font-family="'Barlow Semi Condensed', sans-serif"
+          font-size="22"
+          font-weight="400"
+          letter-spacing="0.2px"
+        >
+          You’ve wandered into empty <tspan fill="var(--accent-lime)">space.</tspan>
+        </text>
+
+        <!-- "Guide me Home" Button -->
+        <foreignObject x="-180" y="68" width="360" height="72">
+          <div xmlns="http://www.w3.org/1999/xhtml" class="w-full h-full flex items-center justify-center">
+            <a
+              href="/"
+              onclick="if (window.history.length > 1 && document.referrer.includes(window.location.hostname)) { event.preventDefault(); window.history.back(); }"
+              class="home-pill-btn px-10 py-3 rounded-full text-white text-[17px] tracking-wide font-normal inline-flex items-center justify-center select-none"
+            >
+              Guide me Home
+            </a>
+          </div>
+        </foreignObject>
+
+      </g>
+    </svg>
+  </div>
+
 </body>
 </html>
