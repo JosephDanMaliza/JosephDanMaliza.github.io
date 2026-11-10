@@ -91,17 +91,22 @@ html, body {
 
 /* Guide Me Home Button */
 .home-pill-btn {
-  background-color: var(--btn-steel);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(84, 182, 255, 0.2);
-  transition: all 0.25s ease;
+  background: rgba(0, 119, 200, 0.2);
+  border: 1px solid rgba(0, 119, 200, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .home-pill-btn:hover {
-  background-color: var(--btn-steel-hover);
-  box-shadow: 0 0 20px rgba(0, 136, 232, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border-color: rgba(144, 215, 255, 0.5);
-  transform: translateY(-1px);
+  background: #0077c8;
+  border-color: #0077c8;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 119, 200, 0.5);
+  transform: translateY(-2px);
 }
 
 .home-pill-btn:active {

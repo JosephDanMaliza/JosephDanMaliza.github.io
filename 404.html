@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="/">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 - Out of Bounds</title>
@@ -8,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/404.css">
+  <link rel="stylesheet" href="/assets/404.css">
+  <link rel="icon" href="/assets/portfolioImgs/JD_Logo.png" type="image/png">
+
 
 </head>
 <body class="flex items-center justify-center min-h-screen">
@@ -233,14 +236,12 @@
           <div xmlns="http://www.w3.org/1999/xhtml" class="w-full h-full flex items-center justify-center">
             <a
               href="/"
-              onclick="if (window.history.length > 1 && document.referrer.includes(window.location.hostname)) { event.preventDefault(); window.history.back(); }"
               class="home-pill-btn px-10 py-3 rounded-full text-white text-[17px] tracking-wide font-normal inline-flex items-center justify-center select-none"
             >
               Guide me Home
             </a>
           </div>
         </foreignObject>
-
       </g>
     </svg>
   </div>
