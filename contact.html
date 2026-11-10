@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navContent">
           <ul class="navbar-nav gap-1 gap-lg-2 align-items-center my-1 my-lg-0 text-center">
             <li class="nav-item w-100 w-lg-auto">
-              <a class="nav-link-pill active" href="/">Home</a>
+              <a class="nav-link-pill" href="/">Home</a>
             </li>
             <li class="nav-item w-100 w-lg-auto">
               <a class="nav-link-pill" href="/aboutMe">About</a>
@@ -49,7 +49,7 @@
               <a class="nav-link-pill" href="/projects">Projects</a>
             </li>
             <li class="nav-item w-100 w-lg-auto">
-              <a class="nav-link-pill" href="/contact">Contacts</a>
+              <a class="nav-link-pill active" href="/contact">Contacts</a>
             </li>
           </ul>
         </div>
@@ -170,58 +170,66 @@
       </div>
     </div>
   </footer>
-
-  <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark text-white border-secondary">
-          <div class="modal-header border-secondary">
-            <h5 class="modal-title"><i class="fas fa-check-circle text-success me-2"></i>Message Sent!</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-start">
-            Thank you for reaching out! Your message has been sent successfully. I will get back to you as soon as possible.
-          </div>
-          <div class="modal-footer border-secondary">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-          </div>
+  
+  <!-- Success Modal (#0077c8 theme) -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-white" style="background: rgba(8, 20, 36, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(0, 119, 200, 0.4); border-radius: 16px; font-family: 'Poppins', sans-serif; box-shadow: 0 10px 30px rgba(0, 119, 200, 0.2);">
+        <div class="modal-header" style="border-bottom: 1px solid rgba(0, 119, 200, 0.25);">
+          <h5 class="modal-title fw-semibold d-flex align-items-center" style="color: #0077c8;">
+            <i class="fas fa-check-circle me-2 fs-5"></i>Message Sent!
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-start py-4" style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.6;">
+          Thank you for reaching out! Your message has been sent successfully. I will get back to you as soon as possible.
+        </div>
+        <div class="modal-footer" style="border-top: 1px solid rgba(0, 119, 200, 0.25);">
+          <button type="button" class="btn fw-medium px-4" data-bs-dismiss="modal" style="background-color: #0077c8; border-color: #0077c8; color: #ffffff; border-radius: 8px;">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Limit / Quota Modal -->
-    <div class="modal fade" id="limitModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark text-white border-secondary">
-          <div class="modal-header border-secondary">
-            <h5 class="modal-title text-warning" id="limitModalTitleText">Limit Reached</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-start" id="limitMessageBody"></div>
-          <div class="modal-footer border-secondary">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+  <!-- Limit / Quota Modal (#005391 theme) -->
+  <div class="modal fade" id="limitModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-white" style="background: rgba(6, 17, 30, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(0, 83, 145, 0.45); border-radius: 16px; font-family: 'Poppins', sans-serif; box-shadow: 0 10px 30px rgba(0, 83, 145, 0.25);">
+        <div class="modal-header" style="border-bottom: 1px solid rgba(0, 83, 145, 0.3);">
+          <h5 class="modal-title fw-semibold d-flex align-items-center" id="limitModalTitleText" style="color: #4da3e6;">
+            <i class="fas fa-hourglass-half me-2 fs-5"></i>Limit Reached
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-start py-4" id="limitMessageBody" style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.6;">
+          <!-- Dynamic message populated by JS -->
+        </div>
+        <div class="modal-footer" style="border-top: 1px solid rgba(0, 83, 145, 0.3);">
+          <button type="button" class="btn fw-medium px-4" data-bs-dismiss="modal" style="background-color: #005391; border-color: #005391; color: #ffffff; border-radius: 8px;">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Invalid Email Modal -->
-    <div class="modal fade" id="invalidEmailModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark text-white border-secondary">
-          <div class="modal-header border-secondary">
-            <h5 class="modal-title text-danger"><i class="fas fa-exclamation-circle me-2"></i>Invalid Email</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-start">
-            Please provide a valid email address so I can reply back to you.
-          </div>
-          <div class="modal-footer border-secondary">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Got it</button>
-          </div>
+  <!-- Invalid Email Modal (Light Red theme) -->
+  <div class="modal fade" id="invalidEmailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-white" style="background: rgba(26, 12, 14, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(255, 107, 107, 0.35); border-radius: 16px; font-family: 'Poppins', sans-serif; box-shadow: 0 10px 30px rgba(255, 107, 107, 0.15);">
+        <div class="modal-header" style="border-bottom: 1px solid rgba(255, 107, 107, 0.2);">
+          <h5 class="modal-title fw-semibold d-flex align-items-center" style="color: #ff8787;">
+            <i class="fas fa-exclamation-circle me-2 fs-5"></i>Invalid Email
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-start py-4" style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.6;">
+          Please provide a valid email address so I can reply back to you.
+        </div>
+        <div class="modal-footer" style="border-top: 1px solid rgba(255, 107, 107, 0.2);">
+          <button type="button" class="btn fw-medium px-4" data-bs-dismiss="modal" style="background-color: #ff6b6b; border-color: #ff6b6b; color: #ffffff; border-radius: 8px;">Got it</button>
         </div>
       </div>
     </div>
+  </div>
     
 <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
