@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const messageSuccessModal = successModalElement ? new bootstrap.Modal(successModalElement) : null;
 
   // Insert YOUR Web3Forms access key here:
-  const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
-  const MAXIMUM_MONTHLY_SUBMISSIONS_PER_USER = 2;
+  const WEB3FORMS_ACCESS_KEY = "718b36de-ea06-4efb-af1b-55ad3e0c86e1";
+  const MAXIMUM_MONTHLY_SUBMISSIONS_PER_USER = 10;
 
   function displayLimitModal(title, message) {
     if (!submissionLimitModal) return;
