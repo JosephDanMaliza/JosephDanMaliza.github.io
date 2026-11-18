@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="custom-scrollbar-carousel">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Joseph Daniel Maliza</title>
+  <title>Projects | Danilo</title>
 
-  <!-- Bootstrap 5 & FontAwesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- External Stylesheets -->
   <link rel="stylesheet" href="assets/global.css">
   <link rel="stylesheet" href="assets/projects.css">
   <link rel="icon" href="assets/portfolioImgs/JD_Logo.png" type="image/png">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/projects.js" defer></script>  
+  <script src="js/stars.js" defer></script>
+  <script src="js/global.js" defer></script>
 </head>
 <body class="portfolio-page">
 
   <canvas id="hyperspace" aria-hidden="true"></canvas>
+
   <!-- Navigation Capsule -->
   <header class="navbar-wrapper container-fluid px-3 px-lg-5 pt-3 pt-md-4 flex-shrink-0">
-    <nav class="navbar navbar-expand-lg header-pill mx-auto">
+    <nav class="navbar navbar-expand-lg header-pill mx-auto fixed-top" style="z-index: 1000;">
       <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
         
         <!-- Left Responsive Logo -->
         <a class="navbar-brand d-flex align-items-center m-0 py-0" href="index.html">
-          <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo" onerror="this.src='https://placehold.co/60x60/1b4776/ffffff?text=JD'">
+          <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo" onerror="this.src='https://placehold.co/44x44/1b4776/ffffff?text=JD'">
         </a>
 
         <!-- Mobile Toggler -->
@@ -63,8 +66,8 @@
   </header>
 
   <!-- Main Projects Dashboard Frame -->
-  <main class="content-container container-fluid px-3 px-lg-5 py-4 flex-grow-1">
-    <div class="projects-master-container p-3 p-md-4">
+  <main class="container-fluid px-3 px-lg-5 py-4 content-container">
+      <div class="projects-master-container p-4 p-md-4">
       <div class="row g-4 align-items-stretch">
 
         <!-- Left Sidebar: Project List -->
@@ -72,67 +75,69 @@
           <div class="projects-sidebar-wrapper">
             <div class="projects-sidebar" id="projectList">
 
-              <button class="project-tab-card active" data-index="0">
+              <button class="project-tab-card py-2 px-3 mb-2" data-index="0">
                 <div class="tab-title text-truncate">LANDAS: 2D Mobile Game</div>
                 <small class="tab-tag d-block text-truncate">Unity • C# • Educational</small>
               </button>
 
-              <button class="project-tab-card" data-index="1">
+              <button class="project-tab-card py-2 px-3 mb-2" data-index="1">
                 <div class="tab-title text-truncate">CentRE Platform &amp; Hub</div>
                 <small class="tab-tag d-block text-truncate">Front-End • QA • UI/UX</small>
               </button>
 
-              <button class="project-tab-card" data-index="2">
+              <button class="project-tab-card py-2 px-3 mb-2" data-index="2">
                 <div class="tab-title text-truncate">NowUKnow Portal</div>
                 <small class="tab-tag d-block text-truncate">PHP • MySQL • Bootstrap</small>
               </button>
 
-              <button class="project-tab-card" data-index="3">
+              <button class="project-tab-card py-2 px-3 mb-2" data-index="3">
                 <div class="tab-title text-truncate">Celestia Events</div>
                 <small class="tab-tag d-block text-truncate">Community Discovery • CRUD</small>
               </button>
 
-              <button class="project-tab-card" data-index="4">
+              <button class="project-tab-card py-2 px-3 mb-0" data-index="4">
                 <div class="tab-title text-truncate">KuroNeko: Journey</div>
                 <small class="tab-tag d-block text-truncate">Java Swing • Desktop Game</small>
               </button>
 
             </div>
           </div>
-        </div>
+        </div>  
 
-        <!-- Right: Showcase Area (1 Main Image Only) -->
+        <!-- Right: Showcase Area -->
         <div class="col-12 col-md-7 col-lg-8 d-flex flex-column">
-          <div class="project-showcase-card p-3 p-md-4 p-lg-5 d-flex flex-column justify-content-between">
+          <div class="project-showcase-card p-4 p-lg-4 d-flex flex-column justify-content-between h-100">
             
-            <!-- Single Primary Preview Screen -->
-            <div class="showcase-screen-box mb-4">
+            <!-- Single Primary Preview Screen-->
+            <div class="showcase-screen-box mb-3 flex-shrink-0" style="height: 270px; min-height: 270px; overflow: hidden;">
               <img id="showcaseImage" 
                    src="assets/portfolioImgs/landas.jpg" 
                    alt="Project Preview" 
-                   class="showcase-img"
+                   class="showcase-img object-fit-cover w-100 h-100"
                    onerror="this.src='https://placehold.co/1200x675/113355/ffffff?text=Project+Preview+Screen'">
             </div>
 
             <!-- Content Area -->
-            <div class="showcase-info-box">
-              <h2 id="showcaseTitle" class="project-display-title mb-2">LANDAS: 2D Gamified Mobile Application</h2>
-              <p id="showcaseDesc" class="project-display-desc mb-3">
-                A 2D gamified Philippine history educational mobile game built to deliver immersive cultural learning. Commended for strict compliance with ISO/IEC 25010 software quality benchmarks and recognized with the Best in Capstone Project award.
-              </p>
+            <div class="showcase-info-box d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <h2 id="showcaseTitle" class="project-display-title fw-bold mb-2" style="font-size: 1.5rem; min-height: 2.3em; display: -webkit-box; display: box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">LANDAS: 2D Gamified Mobile Application</h2>
+                
+                <p id="showcaseDesc" class="project-display-desc mb-3 text-light opacity-85" style="line-height: 1.6; font-size: 0.95rem; min-height: 4.8em; max-height: 4.8em; overflow: hidden; display: -webkit-box; display: box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical;">
+                  A 2D gamified Philippine history educational mobile game built to deliver immersive cultural learning. Commended for strict compliance with ISO/IEC 25010 software quality benchmarks and recognized with the Best in Capstone Project award.
+                </p>
 
-              <div class="neon-pill-group d-flex flex-wrap gap-2 mb-4" id="techPillContainer">
-                <span class="neon-tech-pill">Unity 2D</span>
-                <span class="neon-tech-pill">C# Scripting</span>
-                <span class="neon-tech-pill">Game Design</span>
+                <div class="neon-pill-group d-flex flex-wrap gap-2 mb-4 align-items-center" id="techPillContainer" style="min-height: 38px;">
+                  <span class="neon-tech-pill px-3 py-1.5" style="font-size: 0.85rem;">Unity 2D</span>
+                  <span class="neon-tech-pill px-3 py-1.5" style="font-size: 0.85rem;">C# Scripting</span>
+                  <span class="neon-tech-pill px-3 py-1.5" style="font-size: 0.85rem;">Game Design</span>
+                </div>
               </div>
 
-              <div class="project-actions d-flex flex-wrap gap-3">
-                <!-- Button triggers Bootstrap Modal -->
-                <button type="button" id="btnDetails" class="btn-more-details flex-grow-1 flex-sm-grow-0 border-0" data-bs-toggle="modal" data-bs-target="#projectGalleryModal">
+              <div class="project-actions d-flex flex-wrap gap-3 mt-auto">
+                <button type="button" id="btnDetails" class="btn-more-details flex-grow-1 flex-sm-grow-0 border-0 px-4 py-2.5" style="font-size: 0.95rem;" data-bs-toggle="modal" data-bs-target="#projectGalleryModal">
                   <i class="fas fa-images me-2"></i>More Details
                 </button>
-                <a id="btnWebsite" href="https://landas2d.github.io/" target="_blank" class="btn-view-website flex-grow-1 flex-sm-grow-0 d-inline-flex">
+                <a id="btnWebsite" href="https://landas2d.github.io/" target="_blank" class="btn-view-website flex-grow-1 flex-sm-grow-0 d-inline-flex px-4 py-2.5" style="font-size: 0.95rem;">
                   <i class="fas fa-arrow-up-right-from-square me-2"></i>View Website
                 </a>
               </div>
@@ -145,10 +150,10 @@
     </div>
   </main>
 
-  <!-- Project Details & Gallery Modal -->
-  <div class="modal fade" id="projectGalleryModal" tabindex="-1" aria-labelledby="modalProjectTitle" aria-hidden="true">
+  <!-- Project Details & Gallery Modal (Place here, outside of header) -->
+  <div class="modal fade" id="projectGalleryModal" tabindex="-1" aria-labelledby="modalProjectTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" style="z-index: 1070;">
     <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content project-modal-content">
+      <div class="modal-content project-modal-content" style="overflow: hidden !important; max-height: 92vh;">
         
         <div class="modal-header border-0 pb-0">
           <div>
@@ -158,26 +163,24 @@
           <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
-        <div class="modal-body py-4">
+        <div class="modal-body py-2" style="overflow-y: hidden !important;">
           <!-- Featured Selected Modal Image -->
-          <div class="modal-screen-preview mb-3">
-            <img id="modalMainImg" src="" alt="Project Screenshot Full" class="modal-featured-img">
+          <div class="modal-screen-preview mb-2" style="max-height: 240px; overflow: hidden;">
+            <img id="modalMainImg" src="" alt="Project Screenshot Full" class="modal-featured-img w-100 object-fit-contain">
           </div>
 
           <!-- Thumbnails Row for Switching -->
-          <div class="modal-gallery-strip d-flex gap-2 pb-3 mb-3 overflow-auto" id="modalGalleryThumbnails">
-            <!-- Dynamically injected thumbnails -->
-          </div>
+          <div class="modal-gallery-strip d-flex gap-2 pb-2 mb-2 overflow-auto" id="modalGalleryThumbnails" style="overflow-x: auto !important; overflow-y: hidden !important; white-space: nowrap;"></div>
 
           <!-- Description -->
           <div class="modal-desc-box p-3 rounded-3">
-            <h6 class="text-info fw-semibold mb-1"><i class="fas fa-circle-info me-2"></i>Overview &amp; Implementation</h6>
-            <p id="modalProjectDesc" class="text-light opacity-90 small mb-0"></p>
+            <h6 class="text-info fw-semibold mb-2 small"><i class="fas fa-circle-info me-2"></i>Overview &amp; Implementation</h6>
+            <p id="modalProjectDesc" class="text-light opacity-90 small mb-0" style="line-height: 1.4;"></p>
           </div>
         </div>
 
-        <div class="modal-footer border-0 pt-0 d-flex justify-content-between">
-          <a id="modalWebsiteBtn" href="#" target="_blank" class="btn-view-website d-inline-flex">
+        <div class="modal-footer border-0 pt-0 pb-3 d-flex justify-content-between">
+          <a id="modalWebsiteBtn" href="#" target="_blank" class="btn-view-website d-inline-flex px-3 py-1.5" style="font-size: 0.875rem;">
             <i class="fas fa-arrow-up-right-from-square me-2"></i>Visit Live Website
           </a>
         </div>
@@ -187,25 +190,16 @@
   </div>
 
   <!-- Responsive Footer -->
-  <footer class="footer-strip py-3 px-3 px-lg-5 mt-auto">
-    <div class="container-fluid d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2 p-0">
+  <footer class="footer-strip px-4 px-lg-5 mt-auto" style="padding-top: 18px; padding-bottom: 18px;">
+    <div class="container-fluid d-flex align-items-center justify-content-between p-0 position-relative">
       <div class="footer-logo">
-        <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo-small" onerror="this.src='https://placehold.co/42x42/1b4776/ffffff?text=JD'">
+        <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo-small" style="width: 35px; height: 35px; object-fit: contain;" onerror="this.src='https://placehold.co/35x35/1b4776/ffffff?text=JD'">
       </div>
-      <div class="footer-copyright text-center">
-        <span>© 2026 Joseph Maliza. All Rights Reserved</span>
+      <div class="footer-copyright position-absolute start-50 translate-middle-x text-center">
+        <span class="small">&copy; 2026 Joseph Maliza. All Rights Reserved</span>
       </div>
-      <div style="width: 32px;" class="d-none d-sm-block"></div>
     </div>
   </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- External Script -->
-  <script src="js/projects.js"></script>
-  <script src="js/stars.js"></script>
-
 
 </body>
 </html>

@@ -374,3 +374,32 @@
   flex-direction: column;
   justify-content: center;
 }
+
+/* Horizontal Carousel Scrollbar */
+.custom-scrollbar-horizontal {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 rgba(255, 255, 255, 0.05);
+}
+
+.custom-scrollbar-horizontal::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar-horizontal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar-horizontal::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-scrollbar-horizontal::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.9);
+}

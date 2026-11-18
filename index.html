@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en" class="custom-scrollbar-carousel"></html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danilo</title>
+  <title>Danilo | Portfolio</title>
   
-  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/global.css">
   <link rel="stylesheet" href="assets/index.css">
   <link rel="icon" href="assets/portfolioImgs/JD_Logo.png" type="image/png">
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/stars.js" defer></script>
+  <script src="js/global.js" defer></script>
+
 </head>
 <body class="portfolio-page d-flex flex-column min-vh-100">
 
-  <!-- Fixed Hyperspace Canvas Background -->
   <canvas id="hyperspace" aria-hidden="true"></canvas>
 
   <!-- Centered Navigation Capsule -->
   <header class="navbar-wrapper container-fluid px-3 px-lg-5 pt-3 pt-md-4 flex-shrink-0">
-    <nav class="navbar navbar-expand-lg header-pill mx-auto">
+    <nav class="navbar navbar-expand-lg header-pill mx-auto fixed-top" style="z-index: 1030;">
       <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
         
         <!-- Left Responsive Logo -->
         <a class="navbar-brand d-flex align-items-center m-0 py-0" href="index.html">
-          <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo" onerror="this.src='https://placehold.co/60x60/1b4776/ffffff?text=JD'">
+          <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo" onerror="this.src='https://placehold.co/44x44/1b4776/ffffff?text=JD'">
         </a>
 
         <!-- Mobile Toggler -->
@@ -65,7 +67,6 @@
     </nav>
   </header>
 
-  <!-- Strictly Centered Hero Section (Vertical & Horizontal) -->
   <main class="hero-container flex-grow-1 d-flex flex-column align-items-center justify-content-center text-center px-3 py-4 w-100">
     
     <div class="w-100" style="max-width: 860px;">
@@ -100,24 +101,16 @@
   </main>
 
   <!-- Centered Footer Bar -->
-  <footer class="footer-strip py-3 px-3 px-lg-5 mt-auto flex-shrink-0">
-    <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between p-0 gap-2">
-      
-      <div class="footer-logo d-flex justify-content-center justify-content-md-start" style="min-width: 48px;">
-        <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo-small" onerror="this.src='https://placehold.co/42x42/1b4776/ffffff?text=JD'">
+<footer class="footer-strip px-4 px-lg-5 mt-auto" style="padding-top: 18px; padding-bottom: 18px;">
+    <div class="container-fluid d-flex align-items-center justify-content-between p-0 position-relative">
+      <div class="footer-logo">
+        <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo-small" style="width: 35px; height: 35px; object-fit: contain;" onerror="this.src='https://placehold.co/35x35/1b4776/ffffff?text=JD'">
       </div>
-      
-      <div class="footer-copyright text-center flex-grow-1">
-        <span>© 2026 Joseph Maliza. All Rights Reserved</span>
+      <div class="footer-copyright position-absolute start-50 translate-middle-x text-center">
+        <span class="small">© 2026 Joseph Maliza. All Rights Reserved</span>
       </div>
-
-      <div class="footer-spacer d-none d-md-block" style="min-width: 48px;" aria-hidden="true"></div>
-      
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/stars.js"></script>
 
 </body>
 </html>

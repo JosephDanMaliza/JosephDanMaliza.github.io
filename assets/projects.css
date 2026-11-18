@@ -266,3 +266,21 @@
   background: rgba(16, 48, 80, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
+.project-modal-content {
+  overflow: hidden !important;
+  max-height: 92vh;
+}
+
+.modal-gallery-strip {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  white-space: nowrap;
+}
+
+body.modal-open .navbar-wrapper,
+body.modal-open header.navbar-wrapper {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
