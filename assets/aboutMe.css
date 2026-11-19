@@ -1,4 +1,4 @@
-/*  About Page Hero Split Card */
+/* About Page Hero Split Card */
 .about-hero-card {
   background: rgba(16, 48, 80, 0.45);
   border: 1px solid var(--border-light);
@@ -13,6 +13,12 @@
   overflow: hidden;
   border: 1.5px solid rgba(82, 146, 212, 0.5);
   cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .hero-photo-box {
+    min-height: 300px;
+  }
 }
 
 .hero-portrait-img {
@@ -43,6 +49,14 @@
 
 .hero-photo-box:hover .photo-hint-tag {
   opacity: 1;
+}
+
+#aboutHeroImg {
+  transition: opacity 0.4s ease-in-out;
+}
+
+#aboutHeroImg.fade-out {
+  opacity: 0;
 }
 
 .section-tag-small {
@@ -155,9 +169,8 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/*  Certifications & Hobbies Cards */
-.cert-card,
-.hobby-card {
+/* Certifications & Hobbies Cards */
+.cert-card {
   flex: 0 0 310px;
   min-width: 310px;
   background: var(--card-bg);
@@ -167,8 +180,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.cert-card:hover,
-.hobby-card:hover {
+.cert-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(47, 131, 200, 0.3);
 }
@@ -188,99 +200,9 @@
   font-weight: 600;
 }
 
-.hobby-icon-box {
-  height: 120px;
-  background: var(--card-light-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.8rem;
-  color: #031427;
-}
-
-/*  Infinite Auto-Scroll Skills Marquee & Tech Badges */
-.skills-marquee-container {
-  overflow: hidden;
-  position: relative;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  gap: 12px;
-}
-
-.marquee-group {
-  display: flex;
-  gap: 12px;
-  animation: scrollMarquee 26s linear infinite;
-}
-
-.skills-marquee-container:hover .marquee-group {
-  animation-play-state: paused;
-}
-
-@keyframes scrollMarquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.tech-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  border-radius: 6px;
-  color: #fff;
-  white-space: nowrap;
-}
-
-.bg-html5 { background: #e34f26; }
-.bg-css3 { background: #1572b6; }
-.bg-js { background: #f7df1e; color: #000; }
-.bg-bootstrap { background: #7952b3; }
-.bg-php { background: #777bb4; }
-.bg-java { background: #e76f00; }
-.bg-python { background: #3776ab; }
-.bg-mysql { background: #00758f; }
-.bg-git { background: #f05032; }
-.bg-github { background: #181717; }
-.bg-vscode { background: #007acc; }
-.bg-figma { background: #f24e1e; }
-.bg-photoshop { background: #31a8ff; }
-.bg-canva { background: #00c4cc; }
-.bg-xampp { background: #fb7a24; }
-.bg-laravel { background: #ff2d20; }
-.bg-alpine { background: #77c1d2; color: #000; }
-.bg-node { background: #339933; }
-.bg-tailwind { background: #06b6d4; }
-.bg-notion,
-.bg-unity { background: #000; border: 1px solid rgba(255, 255, 255, 0.2); }
-
-@media (max-width: 991px) {
-  .hero-photo-box {
-    min-height: 300px;
-  }
-}
-
-#aboutHeroImg {
-  transition: opacity 0.4s ease-in-out;
-}
-
-#aboutHeroImg.fade-out {
-  opacity: 0;
-}
-
-/* Enlarged Hobby Card Dimensions */
 .hobby-card {
   flex: 0 0 320px;
+  min-width: 310px;
   width: 320px;
   min-height: 400px;
   background: rgba(12, 28, 48, 0.55);
@@ -375,31 +297,149 @@
   justify-content: center;
 }
 
-/* Horizontal Carousel Scrollbar */
-.custom-scrollbar-horizontal {
+/* Infinite Auto-Scroll Skills Marquee & Tech Badges */
+.skills-marquee-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+}
+
+.marquee-group {
+  display: flex;
+  gap: 12px;
+  animation: scrollMarquee 26s linear infinite;
+}
+
+.skills-marquee-container:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.bg-html5 { background: #e34f26; }
+.bg-css3 { background: #1572b6; }
+.bg-js { background: #f7df1e; color: #000; }
+.bg-bootstrap { background: #7952b3; }
+.bg-php { background: #777bb4; }
+.bg-java { background: #e76f00; }
+.bg-python { background: #3776ab; }
+.bg-mysql { background: #00758f; }
+.bg-git { background: #f05032; }
+.bg-github { background: #181717; }
+.bg-vscode { background: #007acc; }
+.bg-figma { background: #f24e1e; }
+.bg-photoshop { background: #31a8ff; }
+.bg-canva { background: #00c4cc; }
+.bg-xampp { background: #fb7a24; }
+.bg-laravel { background: #ff2d20; }
+.bg-alpine { background: #77c1d2; color: #000; }
+.bg-node { background: #339933; }
+.bg-tailwind { background: #06b6d4; }
+.bg-notion,
+.bg-unity { background: #000; border: 1px solid rgba(255, 255, 255, 0.2); }
+
+/* Horizontal Carousel Without Scrollbar */
+.carousel-track-no-scrollbar {
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #3b82f6 rgba(255, 255, 255, 0.05);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.custom-scrollbar-horizontal::-webkit-scrollbar {
-  height: 6px;
+.carousel-track-no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-.custom-scrollbar-horizontal::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 9999px;
+/* Glassmorphic Left & Right Arrow Buttons */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(10, 31, 56, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
 }
 
-.custom-scrollbar-horizontal::-webkit-scrollbar-thumb {
+.carousel-nav-btn:hover {
   background: #2563eb;
-  border-radius: 9999px;
-  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+  transform: translateY(-50%) scale(1.08);
 }
 
-.custom-scrollbar-horizontal::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.9);
+.carousel-nav-btn:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-nav-btn.prev-btn {
+  left: -12px;
+}
+
+.carousel-nav-btn.next-btn {
+  right: -12px;
+}
+
+@media (max-width: 768px) {
+  .carousel-nav-btn {
+    display: none;
+  }
+}
+
+/* Center items when wider than a phone without clipping on overflow */
+.centered-carousel-track > :first-child {
+  margin-left: auto;
+}
+
+.centered-carousel-track > :last-child {
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .centered-carousel-track > :first-child {
+    margin-left: 0;
+  }
+
+  .centered-carousel-track > :last-child {
+    margin-right: 0;
+  }
 }

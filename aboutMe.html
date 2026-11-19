@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<html lang="en" class="custom-scrollbar-carousel"></html>
+<html lang="en" class="custom-scrollbar-carousel">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Danilo</title>  
+  <title>About | Danilo</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=Montserrat:wght@800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="assets/global.css">
   <link rel="stylesheet" href="assets/aboutMe.css">
   <link rel="icon" href="assets/portfolioImgs/JD_Logo.png" type="image/png">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="js/aboutMe.js" defer></script>  
+  <script src="js/aboutMe.js" defer></script>
   <script src="js/stars.js" defer></script>
   <script src="js/global.js" defer></script>
-
-
+  <script src="js/carousel.js" defer></script>
 </head>
 <body class="portfolio-page">
 
   <canvas id="hyperspace" aria-hidden="true"></canvas>
 
- <header class="navbar-wrapper container-fluid px-3 px-lg-5 pt-3 pt-md-4 flex-shrink-0">
+  <header class="navbar-wrapper container-fluid px-3 px-lg-5 pt-3 pt-md-4 flex-shrink-0">
     <nav class="navbar navbar-expand-lg header-pill mx-auto fixed-top" style="z-index: 1030;">
       <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
-        
+
         <!-- Left Responsive Logo -->
         <a class="navbar-brand d-flex align-items-center m-0 py-0" href="index.html">
           <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo" onerror="this.src='https://placehold.co/44x44/1b4776/ffffff?text=JD'">
@@ -70,14 +69,14 @@
 
     <section class="about-hero-card p-3 p-md-4 mb-5">
       <div class="row g-4 align-items-stretch">
-        
+
         <!-- Left Photo Card with Flip -->
         <div class="col-lg-5 col-xl-4 d-flex">
           <div class="hero-photo-box w-100" id="photoWrapper" title="Click to switch photo">
-            <img id="aboutHeroImg" 
-                src="assets/portfolioImgs/Gallery/about-me-pic1.jpg" 
-                alt="Joseph Daniel" 
-                class="hero-portrait-img">
+            <img id="aboutHeroImg"
+                 src="assets/portfolioImgs/Gallery/about-me-pic1.jpg"
+                 alt="Joseph Daniel"
+                 class="hero-portrait-img">
             <div class="photo-hint-tag">
               <i class="fas fa-sync-alt me-1"></i> Tap to flip photo
             </div>
@@ -89,10 +88,9 @@
           <div>
             <div class="d-flex justify-content-between align-items-center mb-2">
               <span class="section-tag-small">ABOUT ME</span>
-             
             </div>
 
-            <!-- Title Layout  -->
+            <!-- Title Layout -->
             <h2 class="hero-name-heading mb-1">I'm Joseph Daniel,</h2>
             <div class="hero-role-line mb-3">
               <span class="role-a-prefix">a </span>
@@ -108,9 +106,9 @@
               Outside of building projects, I love diving deep into researching more designs, refining my development skills through continuous practice, and brainstorming creative ideas to bring new concepts to life.
             </p>
           </div>
+
           <!-- Metrics Row -->
           <div class="row g-0 pt-3 border-top border-secondary border-opacity-25 mt-2 align-items-center">
-            
             <div class="col-3 text-start pe-2 pe-md-3">
               <div class="stat-number" style="color: #ffc107;">BSIT</div>
               <div class="stat-label">CUM LAUDE GRADUATE</div>
@@ -125,7 +123,6 @@
               <div class="stat-number" style="color: #ffc107;">10<span class="stat-sup">+</span></div>
               <div class="stat-label">PROJECTS RELEASED</div>
             </div>
-
           </div>
         </div>
 
@@ -135,9 +132,16 @@
     <!-- 3. Fun Facts About Me -->
     <section class="section-block mb-5">
       <h3 class="section-heading mb-3">Fun Facts about Me</h3>
-      <div class="glass-carousel-container p-3">
-        <div class="custom-scrollbar-horizontal d-flex flex-nowrap gap-3 pb-3">
-          
+      <div class="glass-carousel-container p-3 position-relative">
+
+        <!-- Left Arrow -->
+        <button class="carousel-nav-btn prev-btn" id="funFactsPrev" aria-label="Scroll left">
+          &#10094;
+        </button>
+
+        <!-- Scrollable Track -->
+        <div class="carousel-track-no-scrollbar d-flex flex-nowrap gap-3" id="funFactsTrack">
+
           <!-- Favorite Starters -->
           <div class="flip-card" onclick="this.classList.toggle('flipped')">
             <div class="flip-card-inner">
@@ -256,16 +260,28 @@
           </div>
 
         </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-nav-btn next-btn" id="funFactsNext" aria-label="Scroll right">
+          &#10095;
+        </button>
+
       </div>
     </section>
-
 
     <!-- 4. Certification and Achievements -->
     <section class="section-block mb-5" id="awardsSection">
       <h3 class="section-heading mb-3">Certification and Achievements</h3>
-      <div class="glass-carousel-container p-3">
-        <div class="custom-scrollbar-carousel d-flex flex-nowrap gap-4 pb-3">
-          
+      <div class="glass-carousel-container p-3 position-relative">
+
+        <!-- Left Arrow -->
+        <button class="carousel-nav-btn prev-btn" id="certsPrev" aria-label="Scroll left">
+          &#10094;
+        </button>
+
+        <!-- Scrollable / Centered Track -->
+        <div class="carousel-track-no-scrollbar centered-carousel-track d-flex flex-nowrap gap-4" id="certsTrack">
+
           <div class="cert-card">
             <div class="cert-img-box">
               <span class="preview-title">Best in Research</span>
@@ -295,8 +311,14 @@
               <p class="small text-light opacity-75 mb-0">AI for Beginners &amp; Professional Networking.</p>
             </div>
           </div>
-     
+
         </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-nav-btn next-btn" id="certsNext" aria-label="Scroll right">
+          &#10095;
+        </button>
+
       </div>
     </section>
 
@@ -330,7 +352,7 @@
             <span class="tech-badge bg-unity"><i class="fab fa-unity me-1"></i> UNITY</span>
           </div>
 
-          <!-- Duplicate Loop for Seamless Infinite Scroll -->
+          <!-- Duplicate Loop for Infinite Scroll -->
           <div class="marquee-group" aria-hidden="true">
             <span class="tech-badge bg-html5"><i class="fab fa-html5 me-1"></i> HTML5</span>
             <span class="tech-badge bg-css3"><i class="fab fa-css3-alt me-1"></i> CSS3</span>
@@ -358,21 +380,27 @@
       </div>
     </section>
 
-
     <!-- 6. Interest and Hobbies -->
     <section class="section-block mb-5">
       <h3 class="section-heading mb-3">Interest and Hobbies</h3>
-      <div class="glass-carousel-container p-3">
-        <div class="custom-scrollbar-horizontal d-flex flex-nowrap gap-4 pb-3">
-          
+      <div class="glass-carousel-container p-3 position-relative">
+
+        <!-- Left Arrow -->
+        <button class="carousel-nav-btn prev-btn" id="hobbiesPrev" aria-label="Scroll left">
+          &#10094;
+        </button>
+
+        <!-- Scrollable Track -->
+        <div class="carousel-track-no-scrollbar d-flex flex-nowrap gap-4" id="hobbiesTrack">
+
           <!-- Sports & Athletics -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-                data-photos="assets/portfolioImgs/Hobbies/sports1.jpg,
-                assets/portfolioImgs/Hobbies/sports2.jpg,
-                assets/portfolioImgs/Hobbies/sports3.jpg,
-                assets/portfolioImgs/Hobbies/sports4.jpg,
-                assets/portfolioImgs/Hobbies/sports5.jpg">
+                 data-photos="assets/portfolioImgs/Hobbies/sports1.jpg,
+                             assets/portfolioImgs/Hobbies/sports2.jpg,
+                             assets/portfolioImgs/Hobbies/sports3.jpg,
+                             assets/portfolioImgs/Hobbies/sports4.jpg,
+                             assets/portfolioImgs/Hobbies/sports5.jpg">
               <img src="assets/portfolioImgs/Hobbies/sports1.jpg" alt="Volleyball & Badminton" class="hobby-card-img">
               <div class="hobby-flip-badge"><i class="fas fa-sync-alt"></i></div>
               <div class="hobby-icon-box"><i class="fas fa-volleyball-ball"></i></div>
@@ -386,12 +414,12 @@
           <!-- Distance Cardio -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-                data-photos="assets/portfolioImgs/Hobbies/funrun1.jpg, 
-                assets/portfolioImgs/Hobbies/funrun2.jpg,
-                assets/portfolioImgs/Hobbies/funrun3.jpg,
-                assets/portfolioImgs/Hobbies/funrun4.jpg, 
-                assets/portfolioImgs/Hobbies/funrun5.jpg, 
-                assets/portfolioImgs/Hobbies/funrun6.jpg">
+                 data-photos="assets/portfolioImgs/Hobbies/funrun1.jpg,
+                             assets/portfolioImgs/Hobbies/funrun2.jpg,
+                             assets/portfolioImgs/Hobbies/funrun3.jpg,
+                             assets/portfolioImgs/Hobbies/funrun4.jpg,
+                             assets/portfolioImgs/Hobbies/funrun5.jpg,
+                             assets/portfolioImgs/Hobbies/funrun6.jpg">
               <img src="assets/portfolioImgs/Hobbies/funrun1.jpg" alt="Jogging & Fun Runs" class="hobby-card-img">
               <div class="hobby-flip-badge"><i class="fas fa-sync-alt"></i></div>
               <div class="hobby-icon-box"><i class="fas fa-running"></i></div>
@@ -405,10 +433,10 @@
           <!-- Swimming -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-                data-photos="assets/portfolioImgs/Hobbies/swim1.jpg, 
-                assets/portfolioImgs/Hobbies/swim2.jpg,
-                assets/portfolioImgs/Hobbies/swim3.jpg">
-                <img src="assets/portfolioImgs/Hobbies/swim1.jpg" alt="Just Keep Swimming" class="hobby-card-img">
+                 data-photos="assets/portfolioImgs/Hobbies/swim1.jpg,
+                             assets/portfolioImgs/Hobbies/swim2.jpg,
+                             assets/portfolioImgs/Hobbies/swim3.jpg">
+              <img src="assets/portfolioImgs/Hobbies/swim1.jpg" alt="Just Keep Swimming" class="hobby-card-img">
               <div class="hobby-flip-badge"><i class="fas fa-sync-alt"></i></div>
               <div class="hobby-icon-box"><i class="fas fa-swimmer"></i></div>
             </div>
@@ -421,8 +449,8 @@
           <!-- Dance -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-                data-photos="assets/portfolioImgs/Hobbies/dance1.jpg, 
-                assets/portfolioImgs/Hobbies/dance2.jpg">              
+                 data-photos="assets/portfolioImgs/Hobbies/dance1.jpg,
+                             assets/portfolioImgs/Hobbies/dance2.jpg">
               <img src="assets/portfolioImgs/Hobbies/dance1.jpg" alt="Dance & Stages" class="hobby-card-img">
               <div class="hobby-flip-badge"><i class="fas fa-sync-alt"></i></div>
               <div class="hobby-icon-box"><i class="fas fa-shoe-prints"></i></div>
@@ -436,17 +464,16 @@
           <!-- Gamer -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-              data-photos="assets/portfolioImgs/Hobbies/game1.jpg, 
-                assets/portfolioImgs/Hobbies/game2.jpg,
-                assets/portfolioImgs/Hobbies/game3.jpg,
-                assets/portfolioImgs/Hobbies/game4.jpg, 
-                assets/portfolioImgs/Hobbies/game5.jpg, 
-                assets/portfolioImgs/Hobbies/game6.jpg,
-                assets/portfolioImgs/Hobbies/game7.jpg,
-                assets/portfolioImgs/Hobbies/game8.jpg,
-                assets/portfolioImgs/Hobbies/game9.jpg,
-                assets/portfolioImgs/Hobbies/game10.jpg">        
-                      
+                 data-photos="assets/portfolioImgs/Hobbies/game1.jpg,
+                             assets/portfolioImgs/Hobbies/game2.jpg,
+                             assets/portfolioImgs/Hobbies/game3.jpg,
+                             assets/portfolioImgs/Hobbies/game4.jpg,
+                             assets/portfolioImgs/Hobbies/game5.jpg,
+                             assets/portfolioImgs/Hobbies/game6.jpg,
+                             assets/portfolioImgs/Hobbies/game7.jpg,
+                             assets/portfolioImgs/Hobbies/game8.jpg,
+                             assets/portfolioImgs/Hobbies/game9.jpg,
+                             assets/portfolioImgs/Hobbies/game10.jpg">
               <img src="assets/portfolioImgs/Hobbies/game1.jpg" alt="Pass-Time Gaming" class="hobby-card-img">
               <div class="hobby-flip-badge"><i class="fas fa-sync-alt"></i></div>
               <div class="hobby-icon-box"><i class="fas fa-gamepad"></i></div>
@@ -460,10 +487,10 @@
           <!-- Board Games -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-              data-photos="assets/portfolioImgs/Hobbies/boardgame1.jpg, 
-                assets/portfolioImgs/Hobbies/boardgame2.jpg,
-                assets/portfolioImgs/Hobbies/boardgame3.jpg,
-                assets/portfolioImgs/Hobbies/boardgame4.jpg">                    
+                 data-photos="assets/portfolioImgs/Hobbies/boardgame1.jpg,
+                             assets/portfolioImgs/Hobbies/boardgame2.jpg,
+                             assets/portfolioImgs/Hobbies/boardgame3.jpg,
+                             assets/portfolioImgs/Hobbies/boardgame4.jpg">
               <img src="assets/portfolioImgs/Hobbies/boardgame1.jpg" alt="Board & Mind Games" class="hobby-card-img">
               <div class="hobby-flip-badge"><i class="fas fa-sync-alt"></i></div>
               <div class="hobby-icon-box"><i class="fas fa-dice"></i></div>
@@ -477,9 +504,9 @@
           <!-- Cinephile -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-              data-photos="assets/portfolioImgs/Hobbies/movie.jpg, 
-                assets/portfolioImgs/Hobbies/movie2.jpg,
-                assets/portfolioImgs/Hobbies/movie3.jpg">                 
+                 data-photos="assets/portfolioImgs/Hobbies/movie.jpg,
+                             assets/portfolioImgs/Hobbies/movie2.jpg,
+                             assets/portfolioImgs/Hobbies/movie3.jpg">
               <img src="assets/portfolioImgs/Hobbies/movie.jpg" alt="Cinephile Mode" class="hobby-card-img">
               <div class="hobby-flip-badge"><i class="fas fa-sync-alt"></i></div>
               <div class="hobby-icon-box"><i class="fas fa-film"></i></div>
@@ -493,7 +520,7 @@
           <!-- Fiction Books -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-                data-photos="assets/portfolioImgs/Hobbies/book.jpg">
+                 data-photos="assets/portfolioImgs/Hobbies/book.jpg">
               <img src="assets/portfolioImgs/Hobbies/book.jpg" alt="Dystopian & Fantasy Lore" class="hobby-card-img">
               <div class="hobby-icon-box"><i class="fas fa-book-open"></i></div>
             </div>
@@ -506,7 +533,7 @@
           <!-- Music -->
           <div class="hobby-card">
             <div class="hobby-img-wrapper" title="Click to flip photo"
-                data-photos="assets/portfolioImgs/Hobbies/spotify.jpg">
+                 data-photos="assets/portfolioImgs/Hobbies/spotify.jpg">
               <img src="assets/portfolioImgs/Hobbies/spotify.jpg" alt="Music & Playlists" class="hobby-card-img">
               <div class="hobby-icon-box"><i class="fas fa-headphones"></i></div>
             </div>
@@ -517,13 +544,19 @@
           </div>
 
         </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-nav-btn next-btn" id="hobbiesNext" aria-label="Scroll right">
+          &#10095;
+        </button>
+
       </div>
     </section>
 
   </main>
 
   <!-- Full Width Footer Bar -->
-<footer class="footer-strip px-4 px-lg-5 mt-auto" style="padding-top: 18px; padding-bottom: 18px;">
+  <footer class="footer-strip px-4 px-lg-5 mt-auto" style="padding-top: 18px; padding-bottom: 18px;">
     <div class="container-fluid d-flex align-items-center justify-content-between p-0 position-relative">
       <div class="footer-logo">
         <img src="assets/portfolioImgs/JD_Logo.png" alt="JD Logo" class="brand-logo-small" style="width: 35px; height: 35px; object-fit: contain;" onerror="this.src='https://placehold.co/35x35/1b4776/ffffff?text=JD'">
